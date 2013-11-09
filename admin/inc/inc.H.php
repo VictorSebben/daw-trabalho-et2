@@ -17,5 +17,11 @@ class H {
                 filter_input( INPUT_REQUEST, $nomeParam, FILTER_SANITIZE_SPECIAL_CHARS ) : NULL;
         }
     }
+
+    public static function menuAtivo( $menu ) {
+        if( H::getVar( 'menu' ) == $menu ) {
+            echo "class='ativo'";
+        }
+    }
 }
 

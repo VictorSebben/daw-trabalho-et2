@@ -1,5 +1,8 @@
 <?php
 
+header( 'Content-type: text/html; Charset=UTF-8' );
+session_start();
+
 function __autoload( $class_name ) {
     if (file_exists( "dao/dao.$class_name.php" ) ) {
         include "dao/dao.$class_name.php";

@@ -3,15 +3,17 @@
 include 'inc/inc.init.php';
 include 'inc/inc.H.php';
 
-//$modCit = new CitacoesDAO(new Conexao());
-//
-//$sql = 'SELECT * FROM citacoes';
-//$res = $modCit->getCitacoes($sql);
-//var_dump($res);
-//
-//while( $row = pg_fetch_object($res) ) {
-//    var_dump($row->texto);
-//}
-
 $menu = H::getVar('menu', 'GET');
-var_dump($menu);
+$acao = H::getVar('acao', 'GET');
+
+switch($menu) {
+    case 'artigos':
+        include './artigos/index.php';
+        break;
+
+    case 'citacoes':
+        include './citacoes/index.php';
+        break;
+}
+
+include 'template.html.php';
