@@ -12,7 +12,6 @@ class Conexao {
                 . "password='ifsul' dbname='db_repo_conhecimentos_daw1'"
                 . "port='5432'" ) or die( "Não foi possível conectar ao banco de dados." );
 
-        return $this->con;
     }
 
 //    public function getConexao() {

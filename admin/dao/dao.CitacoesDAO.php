@@ -4,8 +4,8 @@ class CitacoesDAO {
     private $db;
 
 
-    public function __construct( $con ) {
-        $this->db = $con;
+    public function __construct( $banco ) {
+        $this->db = $banco;
     }
 
     public function getCitacoes( $sql ) {
