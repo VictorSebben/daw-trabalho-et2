@@ -7,8 +7,7 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/layout.css">
 
-        <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
-        <script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
     </head>
     <body>
         <h1>Gerenciamento de conteúdos</h1>
