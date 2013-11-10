@@ -1,5 +1,7 @@
 <div class='pagn'>
 <?php
+    $Pagn = new Paginacao($pagina_atual, $num_registros_por_pagina, $total_registros);
+
      // Só precisamos dos links de navegação se há mais de uma página de resultados
     if ( $Pagn->get_total_pages() > 1 ) {
         // Mostra o link de "anterior" se ainda há páginas naquela direção.

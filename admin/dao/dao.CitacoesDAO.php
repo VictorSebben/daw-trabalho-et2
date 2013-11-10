@@ -6,22 +6,19 @@ class CitacoesDAO {
     private $pag; // número da página atual
     private $limit;
     private $offset;
+    private $pesq = FALSE;
     private $ordem = 'autor';
 
     public function __construct( $banco ) {
         $this->db = $banco;
     }
 
-    public function setFiltro( $pesq ) {
-        $this->filtro = FALSE;
+    public function setPesquisa( $pesquisa ) {
+        $this->pesq = $pesquisa;
     }
 
     public function setPagAtual( $pag ) {
         $this->pag = $pag;
-    }
-
-    public function setOffset( $offset ) {
-        $this->offset = $offset;
     }
 
     public function setLimit( $limit ) {
@@ -34,7 +31,7 @@ class CitacoesDAO {
     }
 
     public function getTotal() {
-        $sql = "SELECT COUNT(*) AS num FROM citacoes;"; // WHERE {$this->filtro};";
+        $sql = "SELECT COUNT(*) AS num FROM citacoes WHERE texto ILIKE '%{$this->pesq}%';";
         return pg_fetch_object( $this->db->sqlQuery( $sql ) )->num;
     }
 
@@ -43,10 +40,17 @@ class CitacoesDAO {
             $this->ordem = $_REQUEST['ordem'];
         }
 
+        $this->offset = ( $this->pag - 1 ) * $this->limit;
+
         $sql = "SELECT citacoes.id, LEFT ( citacoes.texto, 30 ) AS texto, citacoes.autor, categorias.descricao, usuarios.nome
             FROM citacoes, categorias, usuarios
-            WHERE categorias.id = citacoes.id_categoria
-            AND usuarios.id = citacoes.id_usuario
+            WHERE categorias.id = citacoes.id_categoria";
+
+        if ( $this->pesq ) {
+            $sql .= " AND texto ILIKE '%{$this->pesq}%' ";
+        }
+
+        $sql .= " AND usuarios.id = citacoes.id_usuario
             ORDER BY {$this->ordem}
             LIMIT {$this->limit} OFFSET {$this->offset};";
 

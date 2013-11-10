@@ -5,6 +5,17 @@
 if( $rs ) :
 
 ?>
+    <div id="pesquisa">
+    <form id="form" name="form" method="get" action="index.php?menu=citacoes">
+        <label for="pesquisa">Pesquisar por texto:</label>
+        <input name="pesquisa" type="text" id="pesquisa"
+               size="40" maxlength="40" />
+        <input type="submit" id="btnFiltrar"
+               value="Filtrar" />
+        <input name="menu" type="hidden" id="menu" value="citacoes" />
+    </form>
+    </div>
+
     <div class="artigo">
         <table border="0">
             <thead>
