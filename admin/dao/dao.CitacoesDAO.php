@@ -31,8 +31,11 @@ class CitacoesDAO {
     }
 
     public function getTotal() {
-        $sql = "SELECT COUNT(*) AS num FROM citacoes WHERE publicado = 1
-            AND texto ILIKE '%{$this->pesq}%';";
+        $sql = "SELECT COUNT(*) AS num FROM citacoes WHERE publicado = 1";
+
+        if ( $this->pesq ) {
+            $sql .= " AND texto ILIKE '%{$this->pesq}%';";
+        }
         return pg_fetch_object( $this->db->sqlQuery( $sql ) )->num;
     }
 
