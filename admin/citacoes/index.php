@@ -9,6 +9,23 @@ $acao = H::getVar('acao');
 
 /* Incluir arquivos conforme ação escolhida pelo usuário */
 if($acao == 'listar' || $acao == NULL) {
+    $pagmenu = 'citacoes';
+    $pagordem = isset($_REQUEST['ordem']) ? $_REQUEST['ordem'] : 'autor';
+    $pagpesq = H::getVar( 'pesquisa' );
+
+    $pagina_atual = ( ! empty( $_GET[ 'pag' ] ) ) ? ( int ) $_GET[ 'pag' ] : 1;
+    $num_registros_por_pagina = 1;
+    $total_registros = $citacoesDAO->getTotal();
+
+    $Pagn = new Paginacao($pagina_atual, $num_registros_por_pagina, $total_registros);
+
+    if ( $pagpesq !== NULL ) {
+        $citacoesDAO->setFiltro( $pagpesq );
+    }
+    $citacoesDAO->setOffset( $Pagn->get_offset() );
+    $citacoesDAO->setPagAtual( $pagina_atual );
+    $citacoesDAO->setLimit( $num_registros_por_pagina );
+
     $rs = $citacoesDAO->listar();
     $view = 'citacoes/list.html.php';
 }

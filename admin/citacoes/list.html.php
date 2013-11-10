@@ -50,6 +50,6 @@ endif;
     Total de Registros: <?php echo $citacoesDAO->getTotal(); ?>
 </div>
 
-<div class="paginacao">
-    <?php echo $citacoesDAO->paginacao(); ?>
+<div class='paginacao'>
+  <?php include 'inc/inc.paginacao.html.php'; ?>
 </div>
