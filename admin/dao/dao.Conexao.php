@@ -22,7 +22,7 @@ class Conexao {
 //        return self::$con;
 //    }
 
-    public function sqlQuery($sql) {
+    public function sqlQuery( $sql ) {
         if ( pg_connection_status($this->con ) === PGSQL_CONNECTION_OK ) {
             pg_send_query( $this->con, $sql );
             $res = pg_get_result( $this->con );
@@ -32,5 +32,11 @@ class Conexao {
             echo "Erro na conexão";
             die();
         }
+    }
+
+    public function sqlExec( $sql ) {
+        $res = pg_query($this->con, $sql);
+
+        return pg_affected_rows( $res ) > 0 ? TRUE : FALSE;
     }
 }

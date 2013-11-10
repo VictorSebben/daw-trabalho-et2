@@ -3,8 +3,9 @@
 include 'inc/inc.init.php';
 include 'inc/inc.H.php';
 
-$menu = H::getVar('menu', 'GET');
-$acao = H::getVar('acao', 'GET');
+$menu = H::getVar('menu', 'REQUEST');
+$acao = H::getVar('acao', 'REQUEST');
+$id = H::getVar('id', 'REQUEST');
 
 switch($menu) {
     case 'artigos':

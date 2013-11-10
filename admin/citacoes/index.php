@@ -14,7 +14,7 @@ if($acao == 'listar' || $acao == NULL) {
     $pagpesq = H::getVar( 'pesquisa' );
 
     $pagina_atual = ( ! empty( $_GET[ 'pag' ] ) ) ? ( int ) $_GET[ 'pag' ] : 1;
-    $num_registros_por_pagina = 1;
+    $num_registros_por_pagina = 2;
 
     if ( $pagpesq !== NULL ) {
         $citacoesDAO->setPesquisa( $pagpesq );
@@ -39,9 +39,9 @@ else if($acao == 'inserir'){
     include('citacoes_form.php');
 }
 
-else if($acao == 'remover'){
-    $citacoesDAO->remover($_GET['id']);
-    header("Location: $url");
+else if($acao == 'despublicar'){
+    echo $citacoesDAO->despublicar($id) ? 1 : 0;
+    exit();
 }
 
 else if($acao == 'editar'){

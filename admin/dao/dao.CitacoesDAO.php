@@ -31,7 +31,8 @@ class CitacoesDAO {
     }
 
     public function getTotal() {
-        $sql = "SELECT COUNT(*) AS num FROM citacoes WHERE texto ILIKE '%{$this->pesq}%';";
+        $sql = "SELECT COUNT(*) AS num FROM citacoes WHERE publicado = 1
+            AND texto ILIKE '%{$this->pesq}%';";
         return pg_fetch_object( $this->db->sqlQuery( $sql ) )->num;
     }
 
@@ -44,7 +45,8 @@ class CitacoesDAO {
 
         $sql = "SELECT citacoes.id, LEFT ( citacoes.texto, 30 ) AS texto, citacoes.autor, categorias.descricao, usuarios.nome
             FROM citacoes, categorias, usuarios
-            WHERE categorias.id = citacoes.id_categoria";
+            WHERE categorias.id = citacoes.id_categoria
+            AND publicado = 1";
 
         if ( $this->pesq ) {
             $sql .= " AND texto ILIKE '%{$this->pesq}%' ";
@@ -73,5 +75,12 @@ class CitacoesDAO {
         }
 
         return false;
+    }
+
+    public function despublicar( $id ) {
+        $sql = "UPDATE citacoes SET publicado = 0
+            WHERE id = {$id}";
+
+        return $this->db->SqlExec( $sql );
     }
 }

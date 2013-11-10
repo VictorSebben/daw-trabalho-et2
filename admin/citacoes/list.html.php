@@ -39,8 +39,8 @@ if( $rs ) :
                     <td><?php echo $cit->getUsuario(); ?></td>
                     <td><?php echo $cit->getTexto(); ?></td>
                     <td><?php echo $cit->getAutor(); ?></td>
-                    <td data-id="<?php echo $cit->getId(); ?>">Editar</td>
-                    <td data-id="<?php echo $cit->getId(); ?>">Excluir</td>
+                    <td class="hover" data-id-editar="<?php echo $cit->getId(); ?>">Editar</td>
+                    <td class="hover" data-id-despublicar="<?php echo $cit->getId(); ?>">Excluir</td>
                 </tr>
 <?php
     endforeach;//fim do laço while
@@ -64,3 +64,5 @@ endif;
 <div class='paginacao'>
   <?php include 'inc/inc.paginacao.html.php'; ?>
 </div>
+
+<script src="citacoes/scripts.js"></script>
