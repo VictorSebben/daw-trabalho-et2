@@ -24,8 +24,8 @@ class Conexao {
 
     public function sqlQuery($sql) {
         if ( pg_connection_status($this->con ) === PGSQL_CONNECTION_OK ) {
-            pg_send_query($this->con, $sql );
-            $res = pg_get_result($this->con );
+            pg_send_query( $this->con, $sql );
+            $res = pg_get_result( $this->con );
             return pg_num_rows( $res ) > 0 ? $res : FALSE;
         }
         else {
