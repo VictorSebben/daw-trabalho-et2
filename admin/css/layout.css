@@ -154,17 +154,25 @@ form {
     font-size: 1.4em;
 }
 
+.msg {
+    color: red;
+    font-size: 1.5em;
+}
+
 table {
     border: 1px solid #666;
+    font-size: 1.4em;
+    margin: 10px auto;
+    width: 100%;
+}
+
+table th {
+    font-weight: bold;
 }
 
 table th, table td {
+    border: 1px solid #666;
     padding: 8px;
-}
-
-.tabela-autores {
-    font-size: 1.4em;
-    margin: 10px auto;
 }
 
 .tabela-autores a {
