@@ -308,3 +308,25 @@ a.sair:hover {
 .aut {
     margin-left: 65px;
 }
+
+div.sucesso, div.erro, div.aviso {
+    font-size: 2em;
+	margin: 10px 0 20px 5px;
+    text-align: center;
+    font-size: 20px;
+	padding: 20px 0;
+	cursor: pointer;
+}
+div.sucesso {
+    color: green;
+    border: 2px solid green;
+    background: #a5ffae;
+}
+div.erro {
+    color: red;
+    border: 2px solid red;
+}
+div.aviso {
+    color: orange;
+    border: 2px solid orange;
+}

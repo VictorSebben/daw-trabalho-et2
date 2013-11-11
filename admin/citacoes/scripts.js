@@ -13,11 +13,28 @@ var cit = {
 					url: "index.php",
 					data: { 'menu': 'citacoes', 'acao': 'despublicar', 'id': id },
 					success: function (res) {
-						if ( res == 1 )
+						if ( res == 1 ) {
 							that.parent().remove();
+							if ( $( '.sucesso' ).length < 1 ) {
+								$( '.artigo' ).before( '<div class="sucesso">Citação removida com sucesso.</div>' );
+								$( '.sucesso' ).on( 'click', function () {
+									$( this ).hide('slow', function () {
+									   $( this ).remove();
+									} );
+								} );
+							}
+						}
 						
-						else
-							alert( 'Erro ao tentar despublicar citação.' );
+						else {
+							if ( $( '.erro' ).length < 1 ) {
+								$( '.artigo' ).before( '<div class="erro">Erro ao remover citação.</div>' );
+								$( '.erro' ).on( 'click', function () {
+									$( this ).hide('slow', function () {
+									   $( this ).remove();
+									} );
+								} );
+							}
+						}
 					}
 				} );
 			} );
