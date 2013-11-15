@@ -30,6 +30,24 @@ class CitacoesDAO {
         return $res;
     }
 
+    public function getCitacao( $id ) {
+        $sql = "SELECT citacoes.id_categoria, citacoes.texto
+            FROM citacoes WHERE id = '{$id}'";
+
+        $res = $this->db->sqlQuery( $sql );
+        if( $res ) {
+            $row = pg_fetch_object( $res );
+            $c = new Citacao();
+            $c->setTexto( $row->texto );
+            $c->setId( $id );
+            $c->setCategoria( $row->id_categoria );
+
+            return $c;
+        }
+
+        return false;
+    }
+
     public function getTotal() {
         $sql = "SELECT COUNT(*) AS num FROM citacoes WHERE publicado = 1";
 
@@ -46,10 +64,9 @@ class CitacoesDAO {
 
         $this->offset = ( $this->pag - 1 ) * $this->limit;
 
-        $sql = "SELECT citacoes.id, LEFT ( citacoes.texto, 30 ) AS texto, categorias.descricao, usuarios.nome
-            FROM citacoes, categorias, usuarios
-            WHERE categorias.id = citacoes.id_categoria
-            AND publicado = 1";
+        $sql = "SELECT citacoes.id, LEFT ( citacoes.texto, 30 ) AS texto, citacoes.id_categoria, usuarios.nome
+            FROM citacoes, usuarios
+            WHERE publicado = 1";
 
         if ( $this->pesq ) {
             $sql .= " AND texto ILIKE '%{$this->pesq}%' ";
@@ -67,7 +84,7 @@ class CitacoesDAO {
             while( $row = pg_fetch_object($res) ) {
                 $c = new Citacao();
                 $c->setId($row->id);
-                $c->setCategoria($row->descricao);
+                $c->setCategoria($row->id_categoria);
                 $c->setUsuario($row->nome);
                 $c->setTexto($row->texto);
 
@@ -87,24 +104,29 @@ class CitacoesDAO {
         return $this->db->SqlExec( $sql );
     }
 
-    public function gravarInserir( $citacao ) {
-        if($citacao->getId() != NULL) {
+    public function gravar( $citacao ) {
+        if( $citacao->getId() != NULL ) {
             //update
+            $sql = "UPDATE citacoes SET
+                id_categoria = {$citacao->getCategoria()},
+                    texto = '{$citacao->getTexto()}'
+                        WHERE id = {$citacao->getId()};";
+
         }
 
         else {
             //inserir
             $sql = "INSERT INTO citacoes ( id_categoria, id_usuario, texto )
 				VALUES ( {$citacao->getCategoria()}, 1, '{$citacao->getTexto()}' );";
+        }
 
-			if( $this->db->sqlExec( $sql ) ) {
-				$_SESSION['msg_sucesso'] = "Citação inserida com sucesso.";
-				return true;
-			}
-			else {
-				$_SESSION['msg_erro'] = 'Erro ao inserir citação.';
-				return false;
-			}
+        if( $this->db->sqlExec( $sql ) ) {
+            $_SESSION['msg_sucesso'] = "Citação gravada com sucesso.";
+            return true;
+        }
+        else {
+            $_SESSION['msg_erro'] = 'Programa falhou com sucesso.';
+            return false;
         }
     }
 }

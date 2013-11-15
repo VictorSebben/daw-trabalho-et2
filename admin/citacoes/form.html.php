@@ -15,7 +15,8 @@
 
             <?php
             foreach ( $categorias as $categoria ){
-                if( $categoria->getId() == $cit->getId() )
+                var_dump($categoria->getId(), $cit->getCategoria());
+                if( $categoria->getId() == $cit->getCategoria() )
                     echo "<option value='{$categoria->getId()}' selected='selected'> {$categoria->getDescricao()} </option>";
                 else
                     echo "<option value='{$categoria->getId()}'> {$categoria->getDescricao()} </option>";

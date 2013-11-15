@@ -44,10 +44,12 @@ else if($acao == 'despublicar'){
 }
 
 else if($acao == 'editar'){
-    $categorias = $citacoesDAO->listarCategorias();
-    $autores_da_citacao = $citacoesDAO->listarAutoresDaCitacao($_GET['id']);
-    $rs = $citacoesDAO->mostrar($_GET['id']);
-    include('citacoes_form.php');
+    $catDao = new CategoriasDAO( new Conexao() );
+    $categorias = $catDao->listar();
+
+    $cit = $citacoesDAO->getCitacao( $id );
+
+    $view = 'citacoes/form.html.php';
 }
 
 else if($acao == 'gravar_inserir'){
@@ -56,28 +58,31 @@ else if($acao == 'gravar_inserir'){
     $citacao->setTexto($_POST['texto']);
     $citacao->setCategoria($_POST['categoria']);
 
-	if( $citacoesDAO->gravarInserir( $citacao ) ) {
+	if( $citacoesDAO->gravar( $citacao ) ) {
 		echo 'true';
 	}
 	else {
 		echo 'false';
 	}
-	
+
 	exit();
 }
 
 else if($acao == 'gravar_editar'){
-    $texto = $_POST['texto'];
-    $autores = $_POST['autores'];
-    $categoria = $_POST['categoria'];
-    $id = $_POST['id'];
+    $citacao = new Citacao();
 
-    if( $citacoesDAO->gravarEditar($texto, $autores, $categoria, $id) ) {
+    $citacao->setId( $id );
+    $citacao->setCategoria( $_POST['categoria'] );
+    $citacao->setTexto( $_POST['texto'] );
+
+    if( $citacoesDAO->gravar( $citacao ) ) {
 		echo 'true';
 	}
 	else {
 		echo 'false';
 	}
+
+    exit();
 }
 
 ?>
