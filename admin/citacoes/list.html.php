@@ -16,6 +16,8 @@ if( $rs ) :
     </form>
     </div>
 
+    <?php echo H::sysMsgs(); ?>
+
     <div class="artigo">
         <table border="0">
             <thead>
@@ -23,7 +25,6 @@ if( $rs ) :
                     <th>Categoria</th>
                     <th>Usuário</th>
                     <th>Texto</th>
-                    <th>Autor</th>
                     <th>Editar</th>
                     <th>Excluir</th>
                 </tr>
@@ -38,8 +39,9 @@ if( $rs ) :
                     <td><?php echo $cit->getCategoria(); ?></td>
                     <td><?php echo $cit->getUsuario(); ?></td>
                     <td><?php echo $cit->getTexto(); ?></td>
-                    <td><?php echo $cit->getAutor(); ?></td>
-                    <td class="hover" data-id-editar="<?php echo $cit->getId(); ?>">Editar</td>
+                    <td>
+                        <a href="?menu=citacoes&acao=editar&id=<?php echo $cit->getId(); ?>">Editar</a>
+                    </td>
                     <td class="hover" data-id-despublicar="<?php echo $cit->getId(); ?>">Excluir</td>
                 </tr>
 <?php
@@ -65,4 +67,4 @@ endif;
   <?php include 'inc/inc.paginacao.html.php'; ?>
 </div>
 
-<script src="citacoes/scripts.js"></script>
+<script src="citacoes/list.js"></script>

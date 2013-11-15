@@ -10,7 +10,7 @@ $acao = H::getVar('acao');
 /* Incluir arquivos conforme ação escolhida pelo usuário */
 if($acao == 'listar' || $acao == NULL) {
     $pagmenu = 'citacoes';
-    $pagordem = isset($_REQUEST['ordem']) ? $_REQUEST['ordem'] : 'autor';
+    $pagordem = isset($_REQUEST['ordem']) ? $_REQUEST['ordem'] : 'nome';
     $pagpesq = H::getVar( 'pesquisa' );
 
     $pagina_atual = ( ! empty( $_GET[ 'pag' ] ) ) ? ( int ) $_GET[ 'pag' ] : 1;
@@ -30,14 +30,13 @@ if($acao == 'listar' || $acao == NULL) {
 }
 
 else if($acao == 'inserir'){
-    $autores = $citacoesDAO->listarAutores();
-    $categorias = $citacoesDAO->listarCategorias();
-    $autores_da_citacao = "";
-    $rs->fields['id'] = "";
-    $rs->fields['texto'] = "";
-    $rs->fields['id_categoria'] = "";
-    include('citacoes_form.php');
-}
+    $catDao = new CategoriasDAO( new Conexao() );
+    $categorias = $catDao->listar();
+
+    $cit = new Citacao();
+
+    $view = 'citacoes/form.html.php';
+ }
 
 else if($acao == 'despublicar'){
     echo $citacoesDAO->despublicar($id) ? 1 : 0;
@@ -45,7 +44,6 @@ else if($acao == 'despublicar'){
 }
 
 else if($acao == 'editar'){
-    $autores = $citacoesDAO->listarAutores();
     $categorias = $citacoesDAO->listarCategorias();
     $autores_da_citacao = $citacoesDAO->listarAutoresDaCitacao($_GET['id']);
     $rs = $citacoesDAO->mostrar($_GET['id']);
@@ -53,12 +51,19 @@ else if($acao == 'editar'){
 }
 
 else if($acao == 'gravar_inserir'){
-    $texto = $_POST['texto'];
-    $autores = $_POST['autores'];
-    $categoria = $_POST['categoria'];
+    $citacao = new Citacao();
 
-    $citacoesDAO->gravarInserir($texto, $autores, $categoria);
-    header("Location: $url");
+    $citacao->setTexto($_POST['texto']);
+    $citacao->setCategoria($_POST['categoria']);
+
+	if( $citacoesDAO->gravarInserir( $citacao ) ) {
+		echo 'true';
+	}
+	else {
+		echo 'false';
+	}
+	
+	exit();
 }
 
 else if($acao == 'gravar_editar'){
@@ -67,8 +72,12 @@ else if($acao == 'gravar_editar'){
     $categoria = $_POST['categoria'];
     $id = $_POST['id'];
 
-    $citacoesDAO->gravarEditar($texto, $autores, $categoria, $id);
-    header("Location: $url");
+    if( $citacoesDAO->gravarEditar($texto, $autores, $categoria, $id) ) {
+		echo 'true';
+	}
+	else {
+		echo 'false';
+	}
 }
 
 ?>

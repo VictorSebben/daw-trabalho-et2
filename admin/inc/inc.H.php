@@ -23,4 +23,21 @@ class H {
             echo "class='ativo'";
         }
     }
+
+    public static function pAttr( $obj, $field ) {
+        if ( $obj->__get( $field ) != NULL )
+            echo $obj->__get( $field );
+    }
+
+	public static function sysMsgs(  ) {
+        if( isset( $_SESSION['msg_sucesso'] )){
+            echo "<div class='sucesso'>{$_SESSION['msg_sucesso']}</div>";
+            unset( $_SESSION['msg_sucesso'] );
+        }
+
+        if( isset( $_SESSION['msg_erro'] )) {
+            echo "<div class='erro'>{$_SESSION['msg_erro']}</div>";
+            unset( $_SESSION['msg_erro'] );
+        }
+    }
 }

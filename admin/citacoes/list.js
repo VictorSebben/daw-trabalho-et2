@@ -17,24 +17,18 @@ var cit = {
 							that.parent().remove();
 							if ( $( '.sucesso' ).length < 1 ) {
 								$( '.artigo' ).before( '<div class="sucesso">Citação removida com sucesso.</div>' );
-								$( '.sucesso' ).on( 'click', function () {
-									$( this ).hide('slow', function () {
-									   $( this ).remove();
-									} );
-								} );
+								
 							}
 						}
 						
 						else {
 							if ( $( '.erro' ).length < 1 ) {
 								$( '.artigo' ).before( '<div class="erro">Erro ao remover citação.</div>' );
-								$( '.erro' ).on( 'click', function () {
-									$( this ).hide('slow', function () {
-									   $( this ).remove();
-									} );
-								} );
-							}
+								
+							}							
 						}
+						
+						removeMsg();
 					}
 				} );
 			} );
@@ -43,3 +37,19 @@ var cit = {
 };
 
 cit.excluir();
+
+removeMsg();
+
+function removeMsg() {
+	$( '.sucesso' ).on( 'click', function () {
+		$( this ).hide( 'slow', function () {
+	   		$( this ).remove();
+		} );
+	} );
+	
+	$( '.erro' ).on( 'click', function () {
+		$( this ).hide('slow', function () {
+		   $( this ).remove();
+		} );
+	} );
+}

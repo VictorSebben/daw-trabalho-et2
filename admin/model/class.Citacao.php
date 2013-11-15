@@ -1,14 +1,18 @@
 <?php
 
-Class Citacao {
+class Citacao {
     private $id;
     private $categoria;
     private $usuario;
     private $texto;
-    private $autor;
+    private $publicado;
 
     public function getId() {
         return $this->id;
+    }
+
+    public function __get( $field ) {
+        return $this->$field;
     }
 
     public function getCategoria() {
@@ -23,8 +27,8 @@ Class Citacao {
         return $this->texto;
     }
 
-    public function getAutor() {
-        return $this->autor;
+    public function getPublicado() {
+        return $this->publicado;
     }
 
     public function setId($id) {
@@ -43,9 +47,8 @@ Class Citacao {
         $this->texto = $texto;
     }
 
-    public function setAutor($autor) {
-        $this->autor = $autor;
+    public function setPublicado($publicado) {
+        $this->publicado = $publicado;
     }
-
 
 }

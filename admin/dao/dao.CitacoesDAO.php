@@ -7,7 +7,7 @@ class CitacoesDAO {
     private $limit;
     private $offset;
     private $pesq = FALSE;
-    private $ordem = 'autor';
+    private $ordem = 'nome';
 
     public function __construct( $banco ) {
         $this->db = $banco;
@@ -46,7 +46,7 @@ class CitacoesDAO {
 
         $this->offset = ( $this->pag - 1 ) * $this->limit;
 
-        $sql = "SELECT citacoes.id, LEFT ( citacoes.texto, 30 ) AS texto, citacoes.autor, categorias.descricao, usuarios.nome
+        $sql = "SELECT citacoes.id, LEFT ( citacoes.texto, 30 ) AS texto, categorias.descricao, usuarios.nome
             FROM citacoes, categorias, usuarios
             WHERE categorias.id = citacoes.id_categoria
             AND publicado = 1";
@@ -59,6 +59,7 @@ class CitacoesDAO {
             ORDER BY {$this->ordem}
             LIMIT {$this->limit} OFFSET {$this->offset};";
 
+
         $res = $this->db->sqlQuery( $sql );
         if( $res ) {
             $citacoes = array();
@@ -68,7 +69,6 @@ class CitacoesDAO {
                 $c->setId($row->id);
                 $c->setCategoria($row->descricao);
                 $c->setUsuario($row->nome);
-                $c->setAutor($row->autor);
                 $c->setTexto($row->texto);
 
                 array_push($citacoes, $c);
@@ -85,5 +85,26 @@ class CitacoesDAO {
             WHERE id = {$id}";
 
         return $this->db->SqlExec( $sql );
+    }
+
+    public function gravarInserir( $citacao ) {
+        if($citacao->getId() != NULL) {
+            //update
+        }
+
+        else {
+            //inserir
+            $sql = "INSERT INTO citacoes ( id_categoria, id_usuario, texto )
+				VALUES ( {$citacao->getCategoria()}, 1, '{$citacao->getTexto()}' );";
+
+			if( $this->db->sqlExec( $sql ) ) {
+				$_SESSION['msg_sucesso'] = "Citação inserida com sucesso.";
+				return true;
+			}
+			else {
+				$_SESSION['msg_erro'] = 'Erro ao inserir citação.';
+				return false;
+			}
+        }
     }
 }

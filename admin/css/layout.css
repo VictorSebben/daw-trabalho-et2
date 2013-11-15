@@ -176,8 +176,21 @@ table th, table td {
     padding: 8px;
 }
 
+table td.hover {
+    color: #cc0000;
+}
+
 table td.hover:hover {
     cursor: pointer;
+    color: #660000;
+}
+
+table td a {
+    text-decoration: none;
+    color: #ff6600;
+}
+
+table td a:hover {
     color: #207ebf;
 }
 
