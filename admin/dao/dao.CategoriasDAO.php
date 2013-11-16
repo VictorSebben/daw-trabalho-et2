@@ -28,4 +28,16 @@ class CategoriasDAO {
 
         return false;
     }
+
+    public function getDescCat($id) {
+        $sql = "SELECT descricao FROM categorias WHERE id = '{$id}'";
+
+        $res = $this->db->sqlQuery( $sql );
+        if( $res ) {
+            return pg_fetch_object( $res );
+        }
+        else {
+            return false;
+        }
+    }
 }

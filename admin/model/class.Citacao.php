@@ -3,6 +3,7 @@
 class Citacao {
     private $id;
     private $categoria;
+    private $descCategoria;
     private $usuario;
     private $texto;
     private $publicado;
@@ -50,5 +51,15 @@ class Citacao {
     public function setPublicado($publicado) {
         $this->publicado = $publicado;
     }
+
+    public function getDescCategoria() {
+        return $this->descCategoria;
+    }
+
+    public function setDescCategoria($descCategoria) {
+        $this->descCategoria = $descCategoria;
+    }
+
+
 
 }

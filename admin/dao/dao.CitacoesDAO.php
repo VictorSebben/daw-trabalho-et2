@@ -88,6 +88,10 @@ class CitacoesDAO {
                 $c->setUsuario($row->nome);
                 $c->setTexto($row->texto);
 
+                $catDAO = new CategoriasDAO( new Conexao() );
+                $desc = $catDAO->getDescCat( $c->getCategoria() )->descricao;
+                $c->setDescCategoria( $desc );
+
                 array_push($citacoes, $c);
             }
 

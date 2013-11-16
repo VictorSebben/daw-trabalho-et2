@@ -36,7 +36,7 @@ if( $rs ) :
 ?>
 
                 <tr>
-                    <td><?php echo $cit->getCategoria(); ?></td>
+                    <td><?php echo $cit->getDescCategoria(); ?></td>
                     <td><?php echo $cit->getUsuario(); ?></td>
                     <td><?php echo $cit->getTexto(); ?></td>
                     <td>

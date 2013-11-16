@@ -1,6 +1,7 @@
 <?php
 
 $citacoesDAO = new CitacoesDAO( new Conexao() );
+$catDAO = new CategoriasDAO( new Conexao() );
 
 $url = "?menu=citacoes";
 
@@ -30,8 +31,8 @@ if($acao == 'listar' || $acao == NULL) {
 }
 
 else if($acao == 'inserir'){
-    $catDao = new CategoriasDAO( new Conexao() );
-    $categorias = $catDao->listar();
+    $catDAO = new CategoriasDAO( new Conexao() );
+    $categorias = $catDAO->listar();
 
     $cit = new Citacao();
 
@@ -44,8 +45,7 @@ else if($acao == 'despublicar'){
 }
 
 else if($acao == 'editar'){
-    $catDao = new CategoriasDAO( new Conexao() );
-    $categorias = $catDao->listar();
+    $categorias = $catDAO->listar();
 
     $cit = $citacoesDAO->getCitacao( $id );
 
