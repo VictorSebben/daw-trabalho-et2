@@ -1,6 +1,7 @@
 <?php
 
 $artigosDAO = new ArtigosDAO( new Conexao() );
+$catDAO = new CategoriasDAO( new Conexao() );
 
 $url = "?menu=artigos";
 
@@ -26,4 +27,9 @@ if( $acao == 'listar' || $acao == NULL ) {
 
     $rs = $artigosDAO->listar();
     $view = './artigos/list.html.php';
+}
+
+else if($acao == 'despublicar'){
+    echo $artigosDAO->despublicar($id) ? 1 : 0;
+    exit();
 }

@@ -77,4 +77,11 @@ class ArtigosDAO {
 
         return false;
     }
+
+     public function despublicar( $id ) {
+        $sql = "UPDATE artigos SET publicado = 0
+            WHERE id = {$id}";
+
+        return $this->db->SqlExec( $sql );
+    }
 }
