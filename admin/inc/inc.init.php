@@ -1,5 +1,9 @@
 <?php
 
+define( 'CRIACAO', 1 );
+define( 'EDICAO', 2 );
+define( 'REMOCAO', 3 );
+
 header( 'Content-type: text/html; Charset=UTF-8' );
 session_start();
 

@@ -83,12 +83,17 @@ class ArtigosDAO {
     }
 
      public function despublicar( $id ) {
-         //Antes de retornar, gravar informações da remoção em audit_artigos
-         //$sql = ""; -->INSERT INTO audit_artigos
+         // gravar informações da remoção em audit_artigos
+         $id_desc = REMOCAO;
+         $sql = "INSERT INTO audit_artigos ( id_artigo, id_usuario, id_descricao )
+             VALUES ( $id, {$_SESSION[ 'user_id' ]}, $id_desc )";
 
+         $this->db->sqlExec( $sql );
+
+         // despublicar artigo
          $sql = "UPDATE artigos SET publicado = 0
             WHERE id = {$id}";
 
-        return $this->db->SqlExec( $sql );
+        return $this->db->sqlExec( $sql );
     }
 }
