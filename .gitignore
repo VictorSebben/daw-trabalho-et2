@@ -1,1 +1,4 @@
-/nbproject/
+/nbproject/.buildpath
+.project
+.settings/
+.buildpath
