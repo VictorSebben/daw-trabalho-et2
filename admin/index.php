@@ -16,6 +16,9 @@ switch($menu) {
     case 'citacoes':
         include './citacoes/index.php';
         break;
+
+    default:
+        $view = './welcome.php';
 }
 
 include 'template.html.php';

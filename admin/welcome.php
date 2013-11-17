@@ -1,0 +1,1 @@
+<h2>Bem vindo à área de administração do sistema</h2>
