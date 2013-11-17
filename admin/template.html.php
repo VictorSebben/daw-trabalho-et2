@@ -16,8 +16,6 @@
             <ul>
                 <li><a <?php H::menuAtivo("artigos") ?> href="?menu=artigos">Artigos</a></li>
                 <li><a <?php H::menuAtivo("citacoes") ?> href="?menu=citacoes">Citações</a></li>
-                <li><a <?php H::menuAtivo("categorias") ?> href="?menu=categorias">Categorias</a></li>
-                <li><a <?php H::menuAtivo("usuarios") ?> href="?menu=usuarios">Usuários</a></li>
             </ul>
         </div>
         <div><a  class="sair" href="./?logout">SAIR</a></div>

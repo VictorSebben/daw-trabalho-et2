@@ -21,6 +21,12 @@ if( isset( $_POST['email'] ) ){
 
             session_write_close();
 
+            // inserir informações no audit_login
+            $sql = "INSERT INTO audit_logins ( id_usuario, data_login )
+                VALUES ( {$row->id}, LOCALTIMESTAMP )";
+
+            $db->sqlExec( $sql );
+
             header( 'Location: ./' );
         }
     }
