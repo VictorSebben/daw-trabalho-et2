@@ -121,7 +121,7 @@ class CitacoesDAO {
         else {
             //inserir
             $sql = "INSERT INTO citacoes ( id_categoria, id_usuario, texto )
-				VALUES ( {$citacao->getCategoria()}, 1, '{$citacao->getTexto()}' );";
+                VALUES ( {$citacao->getCategoria()}, {$_SESSION['user_id']}, '{$citacao->getTexto()}' );";
         }
 
         if( $this->db->sqlExec( $sql ) ) {

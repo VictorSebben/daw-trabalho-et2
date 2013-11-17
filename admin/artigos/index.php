@@ -29,7 +29,59 @@ if( $acao == 'listar' || $acao == NULL ) {
     $view = './artigos/list.html.php';
 }
 
+else if($acao == 'inserir'){
+    $catDAO = new CategoriasDAO( new Conexao() );
+    $categorias = $catDAO->listar();
+
+    $art = new Artigo();
+
+    $view = 'artigos/form.html.php';
+ }
+
 else if($acao == 'despublicar'){
     echo $artigosDAO->despublicar($id) ? 1 : 0;
+    exit();
+}
+
+else if($acao == 'editar'){
+    $categorias = $catDAO->listar();
+
+    $art = $artigosDAO->getArtigo( $id );
+
+    $view = 'artigos/form.html.php';
+}
+
+else if($acao == 'gravar_inserir'){
+    $artigo = new Artigo();
+
+    $artigo->setTitulo( $_POST['titulo'] );
+    $artigo->setTexto( $_POST['texto'] );
+    $artigo->setCategoria( $_POST['categoria'] );
+
+	if( $artigosDAO->gravar( $artigo ) ) {
+		echo 'true';
+	}
+	else {
+		echo 'false';
+	}
+
+	exit();
+}
+
+else if($acao == 'gravar_editar'){
+    $artigo = new Artigo();
+
+    $artigo->setId( $id );
+    $artigo->setTitulo( $_POST['titulo'] );
+    $artigo->setTexto( $_POST['texto'] );
+    $artigo->setCategoria( $_POST['categoria'] );
+
+    if( $artigosDAO->gravar( $artigo ) ) {
+		echo 'true';
+	}
+	else {
+		echo 'false';
+	}
+
     exit();
 }

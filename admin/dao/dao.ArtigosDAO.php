@@ -34,6 +34,25 @@ class ArtigosDAO {
         return pg_fetch_object( $this->db->sqlQuery( $sql ) )->num;
     }
 
+    public function getArtigo( $id ) {
+        $sql = "SELECT artigos.id_categoria, artigos.texto, artigos.titulo
+            FROM artigos WHERE id = '{$id}'";
+
+        $res = $this->db->sqlQuery( $sql );
+        if( $res ) {
+            $row = pg_fetch_object( $res );
+            $a = new Artigo();
+            $a->setTexto( $row->texto );
+            $a->setTitulo( $row->titulo );
+            $a->setId( $id );
+            $a->setCategoria( $row->id_categoria );
+
+            return $a;
+        }
+
+        return false;
+    }
+
     public function listar() {
         if ( isset( $_REQUEST[ 'ordem' ] ) ) {
             $this->ordem = $_REQUEST['ordem'];
@@ -42,7 +61,8 @@ class ArtigosDAO {
         $this->offset = ( $this->pag - 1 ) * $this->limit;
 
         $sql = "SELECT artigos.id, LEFT ( artigos.texto, 30 ) AS texto, artigos.titulo,
-		artigos.id_categoria, usuarios.nome, artigos.data_criacao, artigos.data_edicao
+		artigos.id_categoria, usuarios.nome, TO_CHAR(artigos.data_criacao, 'DD/MM/YYYY - HH24:MI:SS') AS data_criacao,
+        TO_CHAR(artigos.data_edicao, 'DD/MM/YYYY - HH24:MI:SS') AS data_edicao
             FROM artigos, usuarios
             WHERE publicado = 1";
 
@@ -83,17 +103,40 @@ class ArtigosDAO {
     }
 
      public function despublicar( $id ) {
-         // gravar informações da remoção em audit_artigos
-         $id_desc = REMOCAO;
-         $sql = "INSERT INTO audit_artigos ( id_artigo, id_usuario, id_descricao )
-             VALUES ( $id, {$_SESSION[ 'user_id' ]}, $id_desc )";
-
-         $this->db->sqlExec( $sql );
-
          // despublicar artigo
          $sql = "UPDATE artigos SET publicado = 0
             WHERE id = {$id}";
 
         return $this->db->sqlExec( $sql );
+    }
+
+    public function gravar( $artigo ) {
+        if( $artigo->getId() != NULL ) {
+
+            //update
+            $sql = "UPDATE artigos SET
+                id_categoria = {$artigo->getCategoria()},
+                    titulo = '{$artigo->getTitulo()}',
+                    texto = '{$artigo->getTexto()}',
+                        data_edicao = LOCALTIMESTAMP
+                        WHERE id = {$artigo->getId()};";
+
+        }
+
+        else {
+            //inserir
+            $sql = "INSERT INTO artigos ( id_categoria, id_usuario, titulo, texto )
+                VALUES ( {$artigo->getCategoria()}, {$_SESSION['user_id']}, '{$artigo->getTitulo()}', '{$artigo->getTexto()}' );";
+
+        }
+
+        if( $this->db->sqlExec( $sql ) ) {
+            $_SESSION['msg_sucesso'] = "Artigo gravado com sucesso.";
+            return true;
+        }
+        else {
+            $_SESSION['msg_erro'] = 'Programa falhou com sucesso.';
+            return false;
+        }
     }
 }

@@ -15,6 +15,10 @@ class Artigo {
         return $this->id;
     }
 
+    public function __get( $field ) {
+        return $this->$field;
+    }
+
     public function getCategoria() {
         return $this->categoria;
     }

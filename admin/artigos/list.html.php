@@ -46,7 +46,7 @@ if( $rs ) :
                     <td><?php echo $art->getDataCriacao(); ?></td>
                     <td><?php echo $art->getDataEdicao(); ?></td>
                     <td>
-                        <a href="?menu=citacoes&acao=editar&id=<?php echo $art->getId(); ?>">Editar</a>
+                        <a href="?menu=artigos&acao=editar&id=<?php echo $art->getId(); ?>">Editar</a>
                     </td>
                     <td class="hover" data-id-despublicar="<?php echo $art->getId(); ?>">Excluir</td>
                 </tr>
