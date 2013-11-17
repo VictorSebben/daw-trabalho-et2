@@ -6,13 +6,13 @@ if( $rs ) :
 
 ?>
     <div id="pesquisa">
-    <form id="form" name="form" method="get" action="index.php?menu=citacoes">
+    <form id="form" name="form" method="get" action="index.php?menu=artigos">
         <label for="pesquisa">Pesquisar por texto:</label>
         <input name="pesquisa" type="text" id="pesquisa"
                size="40" maxlength="40" />
         <input type="submit" id="btnFiltrar"
                value="Filtrar" />
-        <input name="menu" type="hidden" id="menu" value="citacoes" />
+        <input name="menu" type="hidden" id="menu" value="artigos" />
     </form>
     </div>
 
@@ -39,7 +39,7 @@ if( $rs ) :
 ?>
 
                 <tr>
-                    <td><?php echo $art->getCategoria(); ?></td>
+                    <td><?php echo $art->getDescCategoria(); ?></td>
                     <td><?php echo $art->getUsuario(); ?></td>
                     <td><?php echo $art->getTitulo(); ?></td>
                     <td><?php echo $art->getTexto(); ?></td>

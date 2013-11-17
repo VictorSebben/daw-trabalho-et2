@@ -69,6 +69,10 @@ class ArtigosDAO {
                 $a->setDataCriacao($row->data_criacao);
                 $a->setDataEdicao($row->data_edicao);
 
+                $catDAO = new CategoriasDAO( new Conexao() );
+                $desc = $catDAO->getDescCat( $a->getCategoria() )->descricao;
+                $a->setDescCategoria( $desc );
+
                 array_push($artigos, $a);
             }
 
@@ -79,7 +83,10 @@ class ArtigosDAO {
     }
 
      public function despublicar( $id ) {
-        $sql = "UPDATE artigos SET publicado = 0
+         //Antes de retornar, gravar informações da remoção em audit_artigos
+         //$sql = ""; -->INSERT INTO audit_artigos
+
+         $sql = "UPDATE artigos SET publicado = 0
             WHERE id = {$id}";
 
         return $this->db->SqlExec( $sql );

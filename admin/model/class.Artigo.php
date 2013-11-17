@@ -3,6 +3,7 @@
 class Artigo {
     private $id;
     private $categoria;
+    private $descCategoria;
     private $usuario;
     private $titulo;
     private $texto;
@@ -74,5 +75,11 @@ class Artigo {
         $this->dataEdicao = $dataEdicao;
     }
 
+    public function getDescCategoria() {
+        return $this->descCategoria;
+    }
 
+    public function setDescCategoria($descCategoria) {
+        $this->descCategoria = $descCategoria;
+    }
 }

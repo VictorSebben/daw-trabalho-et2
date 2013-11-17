@@ -20,7 +20,7 @@
                 <li><a <?php H::menuAtivo("usuarios") ?> href="?menu=usuarios">Usuários</a></li>
             </ul>
         </div>
-        <div><a  class="sair" href="index.php?menu=sair">SAIR</a></div>
+        <div><a  class="sair" href="./?logout">SAIR</a></div>
 
         <div class="conteudo">
             <?php

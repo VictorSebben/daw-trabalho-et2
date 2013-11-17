@@ -2,6 +2,7 @@
 
 include 'inc/inc.init.php';
 include 'inc/inc.H.php';
+include 'inc/inc.login.php';
 
 $menu = H::getVar('menu', 'REQUEST');
 $acao = H::getVar('acao', 'REQUEST');
