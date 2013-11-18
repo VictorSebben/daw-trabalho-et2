@@ -8,6 +8,8 @@ $menu = H::getVar('menu', 'REQUEST');
 $acao = H::getVar('acao', 'REQUEST');
 $id = H::getVar('id', 'REQUEST');
 
+$tmpl = TRUE;
+
 switch($menu) {
     case 'artigos':
         include './artigos/index.php';
@@ -17,8 +19,16 @@ switch($menu) {
         include './citacoes/index.php';
         break;
 
+    case 'audit_logins':
+        $auditDAO = new AuditoriasDAO( new Conexao() );
+        $audits = $auditDAO->listarLogins();
+        include './audits/logins.php';
+        $tmpl = FALSE;
+        break;
+
     default:
         $view = './welcome.php';
 }
-
-include 'template.html.php';
+if ( $tmpl ) {
+    include 'template.html.php';
+}

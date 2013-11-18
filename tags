@@ -1,0 +1,349 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Animation	admin/js/jquery-1.10.2.js	/^function Animation( elem, properties, options ) {$/;"	f
+Artigo	admin/model/class.Artigo.php	/^class Artigo {$/;"	c
+ArtigosDAO	admin/dao/dao.ArtigosDAO.php	/^class ArtigosDAO {$/;"	c
+AuditLogins	admin/model/class.AuditLogins.php	/^class AuditLogins {$/;"	c
+AuditoriasDAO	admin/dao/dao.AuditoriasDAO.php	/^class AuditoriasDAO {$/;"	c
+CRIACAO	admin/inc/inc.init.php	/^define( 'CRIACAO', 1 );$/;"	d
+Categoria	admin/model/class.Categoria.php	/^class Categoria {$/;"	c
+CategoriasDAO	admin/dao/dao.CategoriasDAO.php	/^class CategoriasDAO {$/;"	c
+Citacao	admin/model/class.Citacao.php	/^class Citacao {$/;"	c
+CitacoesDAO	admin/dao/dao.CitacoesDAO.php	/^class CitacoesDAO {$/;"	c
+Conexao	admin/dao/dao.Conexao.php	/^class Conexao {$/;"	c
+EDICAO	admin/inc/inc.init.php	/^define( 'EDICAO', 2 );$/;"	d
+H	admin/inc/inc.H.php	/^class H {$/;"	c
+Paginacao	admin/model/class.Paginacao.php	/^class Paginacao {$/;"	c
+Pagn	admin/inc/inc.paginacao.html.php	/^    $Pagn = new Paginacao($pagina_atual, $num_registros_por_pagina, $total_registros);$/;"	v
+REMOCAO	admin/inc/inc.init.php	/^define( 'REMOCAO', 3 );$/;"	d
+Tween	admin/js/jquery-1.10.2.js	/^Tween.prototype = {$/;"	c
+Tween	admin/js/jquery-1.10.2.js	/^function Tween( elem, options, prop, end, easing ) {$/;"	f
+Tween.constructor	admin/js/jquery-1.10.2.js	/^	constructor: Tween,$/;"	p
+Tween.cur	admin/js/jquery-1.10.2.js	/^	cur: function() {$/;"	m
+Tween.init	admin/js/jquery-1.10.2.js	/^	init: function( elem, options, prop, end, easing, unit ) {$/;"	m
+Tween.init	admin/js/jquery-1.10.2.js	/^Tween.prototype.init.prototype = Tween.prototype;$/;"	m
+Tween.propHooks._default	admin/js/jquery-1.10.2.js	/^	_default: {$/;"	p
+Tween.run	admin/js/jquery-1.10.2.js	/^	run: function( percent ) {$/;"	m
+UsuariosDAO	admin/dao/dao.UsuariosDAO.php	/^class UsuariosDAO {$/;"	c
+__autoload	admin/inc/inc.init.php	/^function __autoload( $class_name ) {$/;"	f
+__construct	admin/dao/dao.ArtigosDAO.php	/^    public function __construct( $banco ) {$/;"	f
+__construct	admin/dao/dao.AuditoriasDAO.php	/^    public function __construct( $banco ) {$/;"	f
+__construct	admin/dao/dao.CategoriasDAO.php	/^    public function __construct( $banco ) {$/;"	f
+__construct	admin/dao/dao.CitacoesDAO.php	/^    public function __construct( $banco ) {$/;"	f
+__construct	admin/dao/dao.Conexao.php	/^    function __construct() {$/;"	f
+__construct	admin/dao/dao.UsuariosDAO.php	/^    public function __construct( $banco ) {$/;"	f
+__construct	admin/model/class.Paginacao.php	/^    public function __construct( $page = 1, $per_page = 3, $total_count = 0 ) {$/;"	f
+__get	admin/model/class.Citacao.php	/^    public function __get( $field ) {$/;"	f
+a	admin/dao/dao.ArtigosDAO.php	/^                $a = new Artigo();$/;"	v
+acao	admin/artigos/index.php	/^$acao = H::getVar('acao');$/;"	v
+acao	admin/artigos/index.php	/^if( $acao == 'listar' || $acao == NULL ) {$/;"	v
+acao	admin/citacoes/index.php	/^$acao = H::getVar('acao');$/;"	v
+acao	admin/citacoes/index.php	/^if($acao == 'listar' || $acao == NULL) {$/;"	v
+acao	admin/index.php	/^$acao = H::getVar('acao', 'REQUEST');$/;"	v
+actualDisplay	admin/js/jquery-1.10.2.js	/^function actualDisplay( name, doc ) {$/;"	f
+addToPrefiltersOrTransports	admin/js/jquery-1.10.2.js	/^function addToPrefiltersOrTransports( structure ) {$/;"	f
+ajaxConvert	admin/js/jquery-1.10.2.js	/^function ajaxConvert( s, response, jqXHR, isSuccess ) {$/;"	f
+ajaxExtend	admin/js/jquery-1.10.2.js	/^function ajaxExtend( target, src ) {$/;"	f
+ajaxHandleResponses	admin/js/jquery-1.10.2.js	/^function ajaxHandleResponses( s, jqXHR, responses ) {$/;"	f
+al	admin/dao/dao.AuditoriasDAO.php	/^                $al = new AuditLogins();$/;"	v
+art.excluir	admin/artigos/list.js	/^	excluir : function () {$/;"	m
+artigos	admin/dao/dao.ArtigosDAO.php	/^            $artigos = array();$/;"	v
+artigosDAO	admin/artigos/index.php	/^$artigosDAO = new ArtigosDAO( new Conexao() );$/;"	v
+auditDAO	admin/index.php	/^        $auditDAO = new AuditoriasDAO( new Conexao() );$/;"	v
+audits	admin/dao/dao.AuditoriasDAO.php	/^            $audits = array();$/;"	v
+audits	admin/index.php	/^        $audits = $auditDAO->listarLogins();$/;"	v
+augmentWidthOrHeight	admin/js/jquery-1.10.2.js	/^function augmentWidthOrHeight( elem, name, extra, isBorderBox, styles ) {$/;"	f
+buildParams	admin/js/jquery-1.10.2.js	/^function buildParams( prefix, obj, traditional, add ) {$/;"	f
+c	admin/dao/dao.CategoriasDAO.php	/^                $c = new Categoria();$/;"	v
+c	admin/dao/dao.CitacoesDAO.php	/^                $c = new Citacao();$/;"	v
+c	admin/dao/dao.CitacoesDAO.php	/^            $c = new Citacao();$/;"	v
+catDAO	admin/artigos/index.php	/^$catDAO = new CategoriasDAO( new Conexao() );$/;"	v
+catDAO	admin/citacoes/index.php	/^    $catDAO = new CategoriasDAO( new Conexao() );$/;"	v
+catDAO	admin/citacoes/index.php	/^$catDAO = new CategoriasDAO( new Conexao() );$/;"	v
+catDAO	admin/dao/dao.ArtigosDAO.php	/^                $catDAO = new CategoriasDAO( new Conexao() );$/;"	v
+catDAO	admin/dao/dao.CitacoesDAO.php	/^                $catDAO = new CategoriasDAO( new Conexao() );$/;"	v
+categoria	admin/model/class.Artigo.php	/^        $this->categoria = $categoria;$/;"	v
+categoria	admin/model/class.Artigo.php	/^    private $categoria;$/;"	v
+categoria	admin/model/class.Citacao.php	/^        $this->categoria = $categoria;$/;"	v
+categoria	admin/model/class.Citacao.php	/^    private $categoria;$/;"	v
+categorias	admin/citacoes/index.php	/^    $categorias = $catDAO->listar();$/;"	v
+categorias	admin/dao/dao.CategoriasDAO.php	/^            $categorias = array();$/;"	v
+cit	admin/citacoes/index.php	/^    $cit = $citacoesDAO->getCitacao( $id );$/;"	v
+cit	admin/citacoes/index.php	/^    $cit = new Citacao();$/;"	v
+cit.excluir	admin/citacoes/list.js	/^	excluir : function () {$/;"	m
+citacao	admin/citacoes/index.php	/^    $citacao = new Citacao();$/;"	v
+citacoes	admin/dao/dao.CitacoesDAO.php	/^            $citacoes = array();$/;"	v
+citacoesDAO	admin/citacoes/index.php	/^$citacoesDAO = new CitacoesDAO( new Conexao() );$/;"	v
+con	admin/dao/dao.Conexao.php	/^        $this->con = pg_connect( "host='localhost' user='ifsul'"$/;"	v
+con	admin/dao/dao.Conexao.php	/^    private $con;$/;"	v
+createActiveXHR	admin/js/jquery-1.10.2.js	/^function createActiveXHR() {$/;"	f
+createFxNow	admin/js/jquery-1.10.2.js	/^function createFxNow() {$/;"	f
+createStandardXHR	admin/js/jquery-1.10.2.js	/^function createStandardXHR() {$/;"	f
+createTween	admin/js/jquery-1.10.2.js	/^function createTween( value, prop, animation ) {$/;"	f
+css_defaultDisplay	admin/js/jquery-1.10.2.js	/^function css_defaultDisplay( nodeName ) {$/;"	f
+curCSS	admin/js/jquery-1.10.2.js	/^	curCSS = function( elem, name, _computed ) {$/;"	f
+current_page	admin/model/class.Paginacao.php	/^        $this->current_page = (int) $page;$/;"	v
+current_page	admin/model/class.Paginacao.php	/^    public $current_page;$/;"	v
+dataCriacao	admin/model/class.Artigo.php	/^        $this->dataCriacao = $dataCriacao;$/;"	v
+dataCriacao	admin/model/class.Artigo.php	/^    private $dataCriacao;$/;"	v
+dataEdicao	admin/model/class.Artigo.php	/^        $this->dataEdicao = $dataEdicao;$/;"	v
+dataEdicao	admin/model/class.Artigo.php	/^    private $dataEdicao;$/;"	v
+dataType	admin/js/jquery-1.10.2.js	/^		var dataType,$/;"	v
+data_hora	admin/model/class.AuditLogins.php	/^        $this->data_hora = $data_hora;$/;"	v
+data_hora	admin/model/class.AuditLogins.php	/^    private $data_hora;$/;"	v
+db	admin/dao/dao.ArtigosDAO.php	/^        $this->db = $banco;$/;"	v
+db	admin/dao/dao.ArtigosDAO.php	/^    private $db;$/;"	v
+db	admin/dao/dao.AuditoriasDAO.php	/^        $this->db = $banco;$/;"	v
+db	admin/dao/dao.AuditoriasDAO.php	/^    private $db;$/;"	v
+db	admin/dao/dao.CategoriasDAO.php	/^        $this->db = $banco;$/;"	v
+db	admin/dao/dao.CategoriasDAO.php	/^    private $db;$/;"	v
+db	admin/dao/dao.CitacoesDAO.php	/^        $this->db = $banco;$/;"	v
+db	admin/dao/dao.CitacoesDAO.php	/^    private $db;$/;"	v
+db	admin/dao/dao.UsuariosDAO.php	/^        $this->db = $banco;$/;"	v
+db	admin/dao/dao.UsuariosDAO.php	/^    private $db;$/;"	v
+db	admin/inc/inc.login.php	/^    $db = new Conexao();$/;"	v
+db_conecta	admin/dao/dao.Conexao.php	/^    public function db_conecta() {$/;"	f
+defaultPrefilter	admin/js/jquery-1.10.2.js	/^function defaultPrefilter( elem, props, opts ) {$/;"	f
+desc	admin/dao/dao.ArtigosDAO.php	/^                $desc = $catDAO->getDescCat( $a->getCategoria() )->descricao;$/;"	v
+desc	admin/dao/dao.CitacoesDAO.php	/^                $desc = $catDAO->getDescCat( $c->getCategoria() )->descricao;$/;"	v
+descCategoria	admin/model/class.Artigo.php	/^        $this->descCategoria = $descCategoria;$/;"	v
+descCategoria	admin/model/class.Artigo.php	/^    private $descCategoria;$/;"	v
+descCategoria	admin/model/class.Citacao.php	/^        $this->descCategoria = $descCategoria;$/;"	v
+descCategoria	admin/model/class.Citacao.php	/^    private $descCategoria;$/;"	v
+descricao	admin/model/class.Categoria.php	/^        $this->descricao = $descricao;$/;"	v
+descricao	admin/model/class.Categoria.php	/^    private $descricao;$/;"	v
+despublicar	admin/dao/dao.ArtigosDAO.php	/^     public function despublicar( $id ) {$/;"	f
+despublicar	admin/dao/dao.CitacoesDAO.php	/^    public function despublicar( $id ) {$/;"	f
+display	admin/js/jquery-1.10.2.js	/^	cssShow = { position: "absolute", visibility: "hidden", display: "block" },$/;"	p
+email	admin/inc/inc.login.php	/^    $email = $_POST['email'];$/;"	v
+fontWeight	admin/js/jquery-1.10.2.js	/^		fontWeight: 400$/;"	p
+form.ajaxIncluir	admin/citacoes/form.js	/^	ajaxIncluir : function () {$/;"	m
+genFx	admin/js/jquery-1.10.2.js	/^function genFx( type, includeWidth ) {$/;"	f
+genFx.which.height	admin/js/jquery-1.10.2.js	/^		attrs = { height: type },$/;"	p
+getCategoria	admin/model/class.Artigo.php	/^    public function getCategoria() {$/;"	f
+getCategoria	admin/model/class.Citacao.php	/^    public function getCategoria() {$/;"	f
+getCitacao	admin/dao/dao.CitacoesDAO.php	/^    public function getCitacao( $id ) {$/;"	f
+getCitacoes	admin/dao/dao.CitacoesDAO.php	/^    public function getCitacoes( $sql ) {$/;"	f
+getConexao	admin/dao/dao.Conexao.php	/^\/\/    public function getConexao() {$/;"	f
+getDataCriacao	admin/model/class.Artigo.php	/^    public function getDataCriacao() {$/;"	f
+getDataEdicao	admin/model/class.Artigo.php	/^    public function getDataEdicao() {$/;"	f
+getDataHora	admin/model/class.AuditLogins.php	/^    public function getDataHora() {$/;"	f
+getDescCat	admin/dao/dao.CategoriasDAO.php	/^    public function getDescCat($id) {$/;"	f
+getDescCategoria	admin/model/class.Artigo.php	/^    public function getDescCategoria() {$/;"	f
+getDescCategoria	admin/model/class.Citacao.php	/^    public function getDescCategoria() {$/;"	f
+getDescricao	admin/model/class.Categoria.php	/^    public function getDescricao() {$/;"	f
+getId	admin/model/class.Artigo.php	/^    public function getId() {$/;"	f
+getId	admin/model/class.AuditLogins.php	/^    public function getId() {$/;"	f
+getId	admin/model/class.Categoria.php	/^    public function getId() {$/;"	f
+getId	admin/model/class.Citacao.php	/^    public function getId() {$/;"	f
+getNome	admin/model/class.AuditLogins.php	/^    public function getNome() {$/;"	f
+getPublicado	admin/model/class.Artigo.php	/^    public function getPublicado() {$/;"	f
+getPublicado	admin/model/class.Citacao.php	/^    public function getPublicado() {$/;"	f
+getStyles	admin/js/jquery-1.10.2.js	/^	getStyles = function( elem ) {$/;"	f
+getTexto	admin/model/class.Artigo.php	/^    public function getTexto() {$/;"	f
+getTexto	admin/model/class.Citacao.php	/^    public function getTexto() {$/;"	f
+getTitulo	admin/model/class.Artigo.php	/^    public function getTitulo() {$/;"	f
+getTotal	admin/dao/dao.ArtigosDAO.php	/^    public function getTotal() {$/;"	f
+getTotal	admin/dao/dao.CitacoesDAO.php	/^    public function getTotal() {$/;"	f
+getUsuario	admin/model/class.Artigo.php	/^    public function getUsuario() {$/;"	f
+getUsuario	admin/model/class.Citacao.php	/^    public function getUsuario() {$/;"	f
+getVar	admin/inc/inc.H.php	/^    public static function getVar($nomeParam, $metodo = 'REQUEST') {$/;"	f
+getWidthOrHeight	admin/js/jquery-1.10.2.js	/^function getWidthOrHeight( elem, name, extra ) {$/;"	f
+getWindow	admin/js/jquery-1.10.2.js	/^function getWindow( elem ) {$/;"	f
+get_offset	admin/model/class.Paginacao.php	/^    public function get_offset() {$/;"	f
+get_total_pages	admin/model/class.Paginacao.php	/^    public function get_total_pages() {$/;"	f
+gravar	admin/dao/dao.CitacoesDAO.php	/^    public function gravar( $citacao ) {$/;"	f
+has_next_page	admin/model/class.Paginacao.php	/^    public function has_next_page() {$/;"	f
+has_previous_page	admin/model/class.Paginacao.php	/^    public function has_previous_page() {$/;"	f
+hooks.empty.fire	admin/js/jquery-1.10.2.js	/^			hooks.empty.fire = function() {$/;"	f
+html	admin/audits/logins.php	/^    $html = ob_get_clean();$/;"	v
+html	admin/audits/logins.php	/^    $html = utf8_encode($html);$/;"	v
+i	admin/inc/inc.paginacao.html.php	/^            if ( $i == $pagina_atual ) {$/;"	v
+id	admin/index.php	/^$id = H::getVar('id', 'REQUEST');$/;"	v
+id	admin/model/class.Artigo.php	/^        $this->id = $id;$/;"	v
+id	admin/model/class.Artigo.php	/^    private $id;$/;"	v
+id	admin/model/class.AuditLogins.php	/^        $this->id = $id;$/;"	v
+id	admin/model/class.AuditLogins.php	/^    private $id;$/;"	v
+id	admin/model/class.Categoria.php	/^        $this->id = $id;$/;"	v
+id	admin/model/class.Categoria.php	/^    private $id;$/;"	v
+id	admin/model/class.Citacao.php	/^        $this->id = $id;$/;"	v
+id	admin/model/class.Citacao.php	/^    private $id;$/;"	v
+id_desc	admin/dao/dao.ArtigosDAO.php	/^         $id_desc = REMOCAO;$/;"	v
+inspectPrefiltersOrTransports	admin/js/jquery-1.10.2.js	/^function inspectPrefiltersOrTransports( structure, options, originalOptions, jqXHR ) {$/;"	f
+inspectPrefiltersOrTransports.inspect	admin/js/jquery-1.10.2.js	/^	function inspect( dataType ) {$/;"	f
+isHidden	admin/js/jquery-1.10.2.js	/^function isHidden( elem, el ) {$/;"	f
+jQuery.cssHooks.opacity.get	admin/js/jquery-1.10.2.js	/^		get: function( elem, computed ) {$/;"	m
+jQuery.cssHooks.opacity.set	admin/js/jquery-1.10.2.js	/^		set: function( elem, value ) {$/;"	m
+jQuery.easing.linear	admin/js/jquery-1.10.2.js	/^	linear: function( p ) {$/;"	m
+jQuery.easing.swing	admin/js/jquery-1.10.2.js	/^	swing: function( p ) {$/;"	m
+jQuery.expr.filters.animated	admin/js/jquery-1.10.2.js	/^	jQuery.expr.filters.animated = function( elem ) {$/;"	f
+jQuery.expr.filters.hidden	admin/js/jquery-1.10.2.js	/^	jQuery.expr.filters.hidden = function( elem ) {$/;"	f
+jQuery.expr.filters.visible	admin/js/jquery-1.10.2.js	/^	jQuery.expr.filters.visible = function( elem ) {$/;"	f
+jQuery.fn.load	admin/js/jquery-1.10.2.js	/^jQuery.fn.load = function( url, params, callback ) {$/;"	f
+jQuery.fn.offset	admin/js/jquery-1.10.2.js	/^jQuery.fn.offset = function( options ) {$/;"	f
+jQuery.fn.offset.docElem.left	admin/js/jquery-1.10.2.js	/^		box = { top: 0, left: 0 },$/;"	p
+jQuery.fn.offset.docElem.top	admin/js/jquery-1.10.2.js	/^		box = { top: 0, left: 0 },$/;"	p
+jQuery.fn.size	admin/js/jquery-1.10.2.js	/^jQuery.fn.size = function() {$/;"	f
+jQuery.fx.speeds._default	admin/js/jquery-1.10.2.js	/^	_default: 400$/;"	p
+jQuery.fx.speeds.fast	admin/js/jquery-1.10.2.js	/^	fast: 200,$/;"	p
+jQuery.fx.speeds.slow	admin/js/jquery-1.10.2.js	/^	slow: 600,$/;"	p
+jQuery.fx.start	admin/js/jquery-1.10.2.js	/^jQuery.fx.start = function() {$/;"	f
+jQuery.fx.stop	admin/js/jquery-1.10.2.js	/^jQuery.fx.stop = function() {$/;"	f
+jQuery.fx.tick	admin/js/jquery-1.10.2.js	/^jQuery.fx.tick = function() {$/;"	f
+jQuery.fx.timer	admin/js/jquery-1.10.2.js	/^jQuery.fx.timer = function( timer ) {$/;"	f
+jQuery.offset.setOffset	admin/js/jquery-1.10.2.js	/^	setOffset: function( elem, options, i ) {$/;"	m
+jQuery.param	admin/js/jquery-1.10.2.js	/^jQuery.param = function( a, traditional ) {$/;"	f
+jQuery.speed	admin/js/jquery-1.10.2.js	/^jQuery.speed = function( speed, easing, fn ) {$/;"	f
+letterSpacing	admin/js/jquery-1.10.2.js	/^		letterSpacing: 0,$/;"	p
+limit	admin/dao/dao.ArtigosDAO.php	/^        $this->limit = $limit;$/;"	v
+limit	admin/dao/dao.ArtigosDAO.php	/^    private $limit;$/;"	v
+limit	admin/dao/dao.CitacoesDAO.php	/^        $this->limit = $limit;$/;"	v
+limit	admin/dao/dao.CitacoesDAO.php	/^    private $limit;$/;"	v
+listar	admin/dao/dao.ArtigosDAO.php	/^    public function listar() {$/;"	f
+listar	admin/dao/dao.CategoriasDAO.php	/^    public function listar() {$/;"	f
+listar	admin/dao/dao.CitacoesDAO.php	/^    public function listar() {$/;"	f
+listarLogins	admin/dao/dao.AuditoriasDAO.php	/^    public function listarLogins() {$/;"	f
+menu	admin/index.php	/^$menu = H::getVar('menu', 'REQUEST');$/;"	v
+menuAtivo	admin/inc/inc.H.php	/^    public static function menuAtivo( $menu ) {$/;"	f
+metodo	admin/inc/inc.H.php	/^        else if( $metodo == 'POST' ) {$/;"	v
+metodo	admin/inc/inc.H.php	/^        if( $metodo == 'GET' ) {$/;"	v
+metodo	admin/inc/inc.H.php	/^    public static function getVar($nomeParam, $metodo = 'REQUEST') {$/;"	v
+mpdf	admin/audits/logins.php	/^    $mpdf = new mPDF();$/;"	v
+next_page	admin/model/class.Paginacao.php	/^    public function next_page() {$/;"	f
+nome	admin/model/class.AuditLogins.php	/^        $this->nome = $nome;$/;"	v
+nome	admin/model/class.AuditLogins.php	/^    private $nome;$/;"	v
+num_registros_por_pagina	admin/artigos/index.php	/^    $num_registros_por_pagina = 2;$/;"	v
+num_registros_por_pagina	admin/citacoes/index.php	/^    $num_registros_por_pagina = 2;$/;"	v
+offset	admin/dao/dao.ArtigosDAO.php	/^        $this->offset = ( $this->pag - 1 ) * $this->limit;$/;"	v
+offset	admin/dao/dao.ArtigosDAO.php	/^    private $offset;$/;"	v
+offset	admin/dao/dao.CitacoesDAO.php	/^        $this->offset = ( $this->pag - 1 ) * $this->limit;$/;"	v
+offset	admin/dao/dao.CitacoesDAO.php	/^    private $offset;$/;"	v
+oldCallbacks	admin/js/jquery-1.10.2.js	/^var oldCallbacks = [],$/;"	v
+opt.complete	admin/js/jquery-1.10.2.js	/^	opt.complete = function() {$/;"	f
+ordem	admin/dao/dao.ArtigosDAO.php	/^            $this->ordem = $_REQUEST['ordem'];$/;"	v
+ordem	admin/dao/dao.ArtigosDAO.php	/^    private $ordem = 'nome';$/;"	v
+ordem	admin/dao/dao.CitacoesDAO.php	/^            $this->ordem = $_REQUEST['ordem'];$/;"	v
+ordem	admin/dao/dao.CitacoesDAO.php	/^    private $ordem = 'nome';$/;"	v
+pAttr	admin/inc/inc.H.php	/^    public static function pAttr( $obj, $field ) {$/;"	f
+pag	admin/dao/dao.ArtigosDAO.php	/^        $this->pag = $pag;$/;"	v
+pag	admin/dao/dao.ArtigosDAO.php	/^    private $pag; \/\/ número da página atual$/;"	v
+pag	admin/dao/dao.CitacoesDAO.php	/^        $this->pag = $pag;$/;"	v
+pag	admin/dao/dao.CitacoesDAO.php	/^    private $pag; \/\/ número da página atual$/;"	v
+page	admin/model/class.Paginacao.php	/^    public function __construct( $page = 1, $per_page = 3, $total_count = 0 ) {$/;"	v
+pagina_atual	admin/artigos/index.php	/^    $pagina_atual = ( ! empty( $_GET[ 'pag' ] ) ) ? ( int ) $_GET[ 'pag' ] : 1;$/;"	v
+pagina_atual	admin/citacoes/index.php	/^    $pagina_atual = ( ! empty( $_GET[ 'pag' ] ) ) ? ( int ) $_GET[ 'pag' ] : 1;$/;"	v
+pagmenu	admin/artigos/index.php	/^    $pagmenu = 'artigos';$/;"	v
+pagmenu	admin/citacoes/index.php	/^    $pagmenu = 'citacoes';$/;"	v
+pagordem	admin/artigos/index.php	/^    $pagordem = isset($_REQUEST['ordem']) ? $_REQUEST['ordem'] : 'nome';$/;"	v
+pagordem	admin/citacoes/index.php	/^    $pagordem = isset($_REQUEST['ordem']) ? $_REQUEST['ordem'] : 'nome';$/;"	v
+pagpesq	admin/artigos/index.php	/^    $pagpesq = H::getVar( 'pesquisa' );$/;"	v
+pagpesq	admin/citacoes/index.php	/^    $pagpesq = H::getVar( 'pesquisa' );$/;"	v
+per_page	admin/model/class.Paginacao.php	/^        $this->per_page = (int) $per_page;$/;"	v
+per_page	admin/model/class.Paginacao.php	/^    public $per_page;$/;"	v
+pesq	admin/dao/dao.ArtigosDAO.php	/^        $this->pesq = $pesquisa;$/;"	v
+pesq	admin/dao/dao.ArtigosDAO.php	/^    private $pesq = FALSE;$/;"	v
+pesq	admin/dao/dao.CitacoesDAO.php	/^        $this->pesq = $pesquisa;$/;"	v
+pesq	admin/dao/dao.CitacoesDAO.php	/^    private $pesq = FALSE;$/;"	v
+position	admin/js/jquery-1.10.2.js	/^	cssShow = { position: "absolute", visibility: "hidden", display: "block" },$/;"	p
+previous_page	admin/model/class.Paginacao.php	/^    public function previous_page() {$/;"	f
+propFilter	admin/js/jquery-1.10.2.js	/^function propFilter( props, specialEasing ) {$/;"	f
+publicado	admin/model/class.Artigo.php	/^        $this->publicado = $publicado;$/;"	v
+publicado	admin/model/class.Artigo.php	/^    private $publicado;$/;"	v
+publicado	admin/model/class.Citacao.php	/^        $this->publicado = $publicado;$/;"	v
+publicado	admin/model/class.Citacao.php	/^    private $publicado;$/;"	v
+r20	admin/js/jquery-1.10.2.js	/^var r20 = \/%20\/g,$/;"	v
+removeMsg	admin/artigos/list.js	/^function removeMsg() {$/;"	f
+removeMsg	admin/citacoes/list.js	/^function removeMsg() {$/;"	f
+res	admin/dao/dao.ArtigosDAO.php	/^        $res = $this->db->sqlQuery( $sql );$/;"	v
+res	admin/dao/dao.AuditoriasDAO.php	/^        $res = $this->db->sqlQuery( $sql );$/;"	v
+res	admin/dao/dao.CategoriasDAO.php	/^        $res = $this->db->sqlQuery( $sql );$/;"	v
+res	admin/dao/dao.CitacoesDAO.php	/^        $res = $this->db->sqlQuery( $sql );$/;"	v
+res	admin/dao/dao.Conexao.php	/^            $res = pg_get_result( $this->con );$/;"	v
+res	admin/dao/dao.Conexao.php	/^        $res = pg_query($this->con, $sql);$/;"	v
+return	admin/js/jquery-1.10.2.js	/^	return new Tween.prototype.init( elem, options, prop, end, easing );$/;"	c
+return.init	admin/js/jquery-1.10.2.js	/^	return new Tween.prototype.init( elem, options, prop, end, easing );$/;"	m
+row	admin/dao/dao.ArtigosDAO.php	/^            while( $row = pg_fetch_object($res) ) {$/;"	v
+row	admin/dao/dao.AuditoriasDAO.php	/^            while( $row = pg_fetch_object( $res ) ) {$/;"	v
+row	admin/dao/dao.CategoriasDAO.php	/^            while( $row = pg_fetch_object($res) ) {$/;"	v
+row	admin/dao/dao.CitacoesDAO.php	/^            $row = pg_fetch_object( $res );$/;"	v
+row	admin/dao/dao.CitacoesDAO.php	/^            while( $row = pg_fetch_object($res) ) {$/;"	v
+row	admin/inc/inc.login.php	/^        $row = pg_fetch_object( $rs );$/;"	v
+rs	admin/artigos/index.php	/^    $rs = $artigosDAO->listar();$/;"	v
+rs	admin/citacoes/index.php	/^    $rs = $citacoesDAO->listar();$/;"	v
+rs	admin/inc/inc.login.php	/^    $rs = $db->sqlQuery( $sql );$/;"	v
+senha	admin/inc/inc.login.php	/^    $senha = $_POST['senha'];$/;"	v
+setCategoria	admin/model/class.Artigo.php	/^    public function setCategoria($categoria) {$/;"	f
+setCategoria	admin/model/class.Citacao.php	/^    public function setCategoria($categoria) {$/;"	f
+setDataCriacao	admin/model/class.Artigo.php	/^    public function setDataCriacao($dataCriacao) {$/;"	f
+setDataEdicao	admin/model/class.Artigo.php	/^    public function setDataEdicao($dataEdicao) {$/;"	f
+setDataHora	admin/model/class.AuditLogins.php	/^    public function setDataHora( $data_hora ) {$/;"	f
+setDescCategoria	admin/model/class.Artigo.php	/^    public function setDescCategoria($descCategoria) {$/;"	f
+setDescCategoria	admin/model/class.Citacao.php	/^    public function setDescCategoria($descCategoria) {$/;"	f
+setDescricao	admin/model/class.Categoria.php	/^    public function setDescricao($descricao) {$/;"	f
+setId	admin/model/class.Artigo.php	/^    public function setId($id) {$/;"	f
+setId	admin/model/class.AuditLogins.php	/^    public function setId( $id ) {$/;"	f
+setId	admin/model/class.Categoria.php	/^    public function setId($id) {$/;"	f
+setId	admin/model/class.Citacao.php	/^    public function setId($id) {$/;"	f
+setLimit	admin/dao/dao.ArtigosDAO.php	/^    public function setLimit( $limit ) {$/;"	f
+setLimit	admin/dao/dao.CitacoesDAO.php	/^    public function setLimit( $limit ) {$/;"	f
+setNome	admin/model/class.AuditLogins.php	/^    public function setNome( $nome ) {$/;"	f
+setPagAtual	admin/dao/dao.ArtigosDAO.php	/^    public function setPagAtual( $pag ) {$/;"	f
+setPagAtual	admin/dao/dao.CitacoesDAO.php	/^    public function setPagAtual( $pag ) {$/;"	f
+setPesquisa	admin/dao/dao.ArtigosDAO.php	/^    public function setPesquisa( $pesquisa ) {$/;"	f
+setPesquisa	admin/dao/dao.CitacoesDAO.php	/^    public function setPesquisa( $pesquisa ) {$/;"	f
+setPositiveNumber	admin/js/jquery-1.10.2.js	/^function setPositiveNumber( elem, value, subtract ) {$/;"	f
+setPublicado	admin/model/class.Artigo.php	/^    public function setPublicado($publicado) {$/;"	f
+setPublicado	admin/model/class.Citacao.php	/^    public function setPublicado($publicado) {$/;"	f
+setTexto	admin/model/class.Artigo.php	/^    public function setTexto($texto) {$/;"	f
+setTexto	admin/model/class.Citacao.php	/^    public function setTexto($texto) {$/;"	f
+setTitulo	admin/model/class.Artigo.php	/^    public function setTitulo($titulo) {$/;"	f
+setUsuario	admin/model/class.Artigo.php	/^    public function setUsuario($usuario) {$/;"	f
+setUsuario	admin/model/class.Citacao.php	/^    public function setUsuario($usuario) {$/;"	f
+showHide	admin/js/jquery-1.10.2.js	/^function showHide( elements, show ) {$/;"	f
+sql	admin/dao/dao.ArtigosDAO.php	/^         $sql = "INSERT INTO audit_artigos ( id_artigo, id_usuario, id_descricao )$/;"	v
+sql	admin/dao/dao.ArtigosDAO.php	/^         $sql = "UPDATE artigos SET publicado = 0$/;"	v
+sql	admin/dao/dao.ArtigosDAO.php	/^        $sql = "SELECT COUNT(*) AS num FROM artigos WHERE publicado = 1";$/;"	v
+sql	admin/dao/dao.ArtigosDAO.php	/^        $sql = "SELECT artigos.id, LEFT ( artigos.texto, 30 ) AS texto, artigos.titulo,$/;"	v
+sql	admin/dao/dao.AuditoriasDAO.php	/^        $sql = "SELECT$/;"	v
+sql	admin/dao/dao.CategoriasDAO.php	/^        $sql = "SELECT categorias.id, categorias.descricao FROM categorias";$/;"	v
+sql	admin/dao/dao.CategoriasDAO.php	/^        $sql = "SELECT descricao FROM categorias WHERE id = '{$id}'";$/;"	v
+sql	admin/dao/dao.CitacoesDAO.php	/^            $sql = "INSERT INTO citacoes ( id_categoria, id_usuario, texto )$/;"	v
+sql	admin/dao/dao.CitacoesDAO.php	/^            $sql = "UPDATE citacoes SET$/;"	v
+sql	admin/dao/dao.CitacoesDAO.php	/^        $sql = "SELECT COUNT(*) AS num FROM citacoes WHERE publicado = 1";$/;"	v
+sql	admin/dao/dao.CitacoesDAO.php	/^        $sql = "SELECT citacoes.id, LEFT ( citacoes.texto, 30 ) AS texto, citacoes.id_categoria, usuarios.nome$/;"	v
+sql	admin/dao/dao.CitacoesDAO.php	/^        $sql = "SELECT citacoes.id_categoria, citacoes.texto$/;"	v
+sql	admin/dao/dao.CitacoesDAO.php	/^        $sql = "UPDATE citacoes SET publicado = 0$/;"	v
+sql	admin/inc/inc.login.php	/^    $sql = "SELECT id, nome, email, senha$/;"	v
+sqlExec	admin/dao/dao.Conexao.php	/^    public function sqlExec( $sql ) {$/;"	f
+sqlQuery	admin/dao/dao.Conexao.php	/^    public function sqlQuery( $sql ) {$/;"	f
+sysMsgs	admin/inc/inc.H.php	/^	public static function sysMsgs(  ) {$/;"	f
+texto	admin/model/class.Artigo.php	/^        $this->texto = $texto;$/;"	v
+texto	admin/model/class.Artigo.php	/^    private $texto;$/;"	v
+texto	admin/model/class.Citacao.php	/^        $this->texto = $texto;$/;"	v
+texto	admin/model/class.Citacao.php	/^    private $texto;$/;"	v
+titulo	admin/model/class.Artigo.php	/^        $this->titulo = $titulo;$/;"	v
+titulo	admin/model/class.Artigo.php	/^    private $titulo;$/;"	v
+tmpl	admin/index.php	/^        $tmpl = FALSE;$/;"	v
+tmpl	admin/index.php	/^$tmpl = TRUE;$/;"	v
+totalPag	admin/dao/dao.ArtigosDAO.php	/^    private $totalPag; \/\/ para o total de páginas$/;"	v
+totalPag	admin/dao/dao.CitacoesDAO.php	/^    private $totalPag; \/\/ para o total de páginas$/;"	v
+total_count	admin/model/class.Paginacao.php	/^        $this->total_count = (int) $total_count;$/;"	v
+total_count	admin/model/class.Paginacao.php	/^    public $total_count;$/;"	v
+total_registros	admin/artigos/index.php	/^    $total_registros = $artigosDAO->getTotal();$/;"	v
+total_registros	admin/citacoes/index.php	/^    $total_registros = $citacoesDAO->getTotal();$/;"	v
+url	admin/artigos/index.php	/^$url = "?menu=artigos";$/;"	v
+url	admin/citacoes/index.php	/^$url = "?menu=citacoes";$/;"	v
+usuario	admin/model/class.Artigo.php	/^        $this->usuario = $usuario;$/;"	v
+usuario	admin/model/class.Artigo.php	/^    private $usuario;$/;"	v
+usuario	admin/model/class.Citacao.php	/^        $this->usuario = $usuario;$/;"	v
+usuario	admin/model/class.Citacao.php	/^    private $usuario;$/;"	v
+vendorPropName	admin/js/jquery-1.10.2.js	/^function vendorPropName( style, name ) {$/;"	f
+view	admin/artigos/index.php	/^    $view = '.\/artigos\/list.html.php';$/;"	v
+view	admin/citacoes/index.php	/^    $view = 'citacoes\/form.html.php';$/;"	v
+view	admin/citacoes/index.php	/^    $view = 'citacoes\/list.html.php';$/;"	v
+view	admin/index.php	/^        $view = '.\/welcome.php';$/;"	v
+visibility	admin/js/jquery-1.10.2.js	/^	cssShow = { position: "absolute", visibility: "hidden", display: "block" },$/;"	p
