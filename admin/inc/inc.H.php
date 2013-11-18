@@ -40,4 +40,15 @@ class H {
             unset( $_SESSION['msg_erro'] );
         }
     }
+
+    public static function listarMeses( $intervalo ) {
+        $meses = array();
+        $mesAtual = ( int ) date( 'm' );
+
+        for( $x = $mesAtual; $x > $mesAtual - $intervalo; $x-- ) {
+            $meses[] = date( 'm/Y', mktime(0, 0, 0, $x, 1) );
+        }
+
+        return $meses;
+    }
 }

@@ -19,6 +19,10 @@ switch($menu) {
         include './citacoes/index.php';
         break;
 
+    case 'ranking':
+        include './ranking/index.php';
+        break;
+
     case 'audit_logins':
         $auditDAO = new AuditoriasDAO( new Conexao() );
         $audits = $auditDAO->listarLogins();

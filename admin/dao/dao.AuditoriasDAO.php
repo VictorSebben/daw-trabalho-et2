@@ -33,5 +33,28 @@ class AuditoriasDAO {
 
         return false;
     }
+
+    public function listarRanking( $mes ) {
+        list($mes, $ano) = explode('/', $mes);
+
+        $sql = "SELECT
+                   usuarios.id,
+                   usuarios.nome,
+                   COUNT( audit_logins.id ) AS num
+                FROM usuarios
+                INNER JOIN audit_logins ON audit_logins.id_usuario = usuarios.id
+                WHERE EXTRACT ( MONTH FROM audit_logins.data_login ) = '$mes'
+                    AND EXTRACT ( YEAR FROM audit_logins.data_login ) = '$ano'
+                GROUP BY usuarios.id, usuarios.nome
+                ORDER BY num DESC";
+
+        $res = $this->db->sqlQuery( $sql );
+
+        if( $res ) {
+            return $res;
+        }
+
+        return false;
+    }
 }
 

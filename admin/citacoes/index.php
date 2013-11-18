@@ -5,9 +5,6 @@ $catDAO = new CategoriasDAO( new Conexao() );
 
 $url = "?menu=citacoes";
 
-/* Verificar se chegaram ações do usuário */
-$acao = H::getVar('acao');
-
 /* Incluir arquivos conforme ação escolhida pelo usuário */
 if($acao == 'listar' || $acao == NULL) {
     $pagmenu = 'citacoes';

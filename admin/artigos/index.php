@@ -5,9 +5,6 @@ $catDAO = new CategoriasDAO( new Conexao() );
 
 $url = "?menu=artigos";
 
-/* Verificar se chegaram ações do usuário */
-$acao = H::getVar('acao');
-
 if( $acao == 'listar' || $acao == NULL ) {
     $pagmenu = 'artigos';
     $pagordem = isset($_REQUEST['ordem']) ? $_REQUEST['ordem'] : 'nome';
