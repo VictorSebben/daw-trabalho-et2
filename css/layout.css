@@ -1,0 +1,151 @@
+html {
+    background-color: #DDDDDD;
+}
+
+body {
+    width: 860px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border: 3px solid #666;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-indent: 10px;
+}
+
+.entrada {
+    border: 1px solid #207ebf;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#pesquisa {
+    margin: 10px 0;
+}
+
+.titulo {
+    font-size: 1.5em;
+    color: #207ebf;
+    margin-bottom: 5px;
+}
+
+.categoria {
+    color: #ff6600;
+}
+
+.autores {
+    margin-bottom: 5px;
+    color: #002d4b;
+}
+
+.texto {
+    font-size: 1.1em;
+    font-family: "Timer New Roman", serif;
+    margin: 10px 0;
+}
+
+.palavra {
+    font-size: 1.3em;
+    color: #207ebf;
+    margin-bottom: 5px;
+}
+
+.idioma {
+    color: #ff6600;
+    margin-bottom: 5px;
+}
+
+.definicao {
+    color: #002d4b;
+    margin-bottom: 5px;
+}
+
+.exemplo span {
+    font-style: italic;
+}
+
+.idiomas {
+    margin: 0 auto;
+}
+
+.idiomas a {
+    text-decoration: none;
+    color: #002d4b;
+    margin: 10px 0;
+    margin-right: 10px;
+    font-size: 1.1em;
+    display: inline-block;
+    width: 100px;
+    border: 1px solid #002d4b;
+    text-align: center;
+}
+
+.idiomas a:hover {
+    color: #ff6600;
+}
+
+#menu {
+    overflow: hidden;
+    margin-left: -20px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+#menu a {
+    text-decoration: none;
+    display: block;
+    border: 2px solid #002d4b;
+    padding: 7px;
+    color: #660000;
+}
+
+#menu li {
+    list-style: none;
+    float: left;
+    width: 8em;
+    text-align: center;
+    margin-right: 10px;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+#menu li:hover{
+    opacity: .8;
+}
+
+#topo {
+    color: #232323;
+    height: 100px;
+    background: rgb(245,246,246); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(245,246,246,1) 0%, rgba(219,220,226,1) 21%, rgba(184,186,198,1) 49%, rgba(221,223,227,1) 80%, rgba(245,246,246,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(245,246,246,1)), color-stop(21%,rgba(219,220,226,1)), color-stop(49%,rgba(184,186,198,1)), color-stop(80%,rgba(221,223,227,1)), color-stop(100%,rgba(245,246,246,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+}
+
+#topo h1 {
+    position: relative;
+    top: 21px;
+    font-family: cursive;
+}

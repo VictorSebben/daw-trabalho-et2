@@ -33,6 +33,7 @@ switch($menu) {
     default:
         $view = './welcome.php';
 }
+
 if ( $tmpl ) {
     include 'template.html.php';
 }
