@@ -1,34 +1,7 @@
-<h2>Listagem de acessos: <?php echo $mes ?> </h2>
+<h2>Listagem de acessos:</h2>
 
-<?php if( $rs ): ?>
-<table border='1'>
-    <thead>
-      <tr>
-          <th>ID</th>
-          <th>Nome Usuário</th>
-          <th>Número de acessos</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php while ( $row = pg_fetch_object( $rs ) ): ?>
-        <tr>
-            <td><?php echo $row->id; ?></td>
-            <td><?php echo $row->nome; ?></td>
-            <td><?php echo $row->num; ?></td>
-        </tr>
-      <?php endwhile; ?>
-
-    </tbody>
-
-</table>
-
-<?php
-else:
-    echo "<p>Não há registros para a data escolhida.</p>";
-endif;
-?>
-
-<fieldset>
+<div class="ranking">
+	<fieldset>
         <legend>Listar ranking de acessos mensal:</legend>
 
         <form action="./" method="get">
@@ -43,4 +16,36 @@ endif;
             <input type="hidden" value="ranking" name="menu">
             <input type="submit" value="Enviar">
         </form>
-    </fieldset>
+	</fieldset>
+	
+	<h3>Período: <?php echo $mes ?> </h3>
+
+	<?php if( $rs ): ?>
+	<table border='1'>
+    	<thead>
+      	<tr>
+			<th>ID</th>
+          	<th>Nome Usuário</th>
+          	<th>Número de acessos</th>
+      	</tr>
+    	</thead>
+    	<tbody>
+      	<?php while ( $row = pg_fetch_object( $rs ) ): ?>
+        	<tr>
+            	<td><?php echo $row->id; ?></td>
+				<td><?php echo $row->nome; ?></td>
+            	<td><?php echo $row->num; ?></td>
+        	</tr>
+      	<?php endwhile; ?>
+
+		</tbody>
+
+	</table>
+
+	<?php
+	else:
+		echo "<span class='msg'>Não há registros para a data escolhida.</span>";
+	endif;
+	?>
+
+</div>

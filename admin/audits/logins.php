@@ -4,6 +4,9 @@
   <head>
     <meta charset='utf-8'>
     <title>Auditoria de Logins</title>
+	  
+	<link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/print.css">
   </head>
 <body>
 
@@ -11,6 +14,7 @@
     <a href='?menu=audit_logins&pdf'>Gerar PDF</a>
 <?php endif; ?>
 
+  <h1>Auditoria de logins no sistema</h1>	
   <table border='1'>
     <thead>
       <tr>

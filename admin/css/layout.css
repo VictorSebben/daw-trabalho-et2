@@ -343,3 +343,26 @@ div.aviso {
     color: orange;
     border: 2px solid orange;
 }
+
+.ranking td:first-child {
+	width: 10%;
+}
+.ranking td:nth-child(2) {
+	width: 70%;
+}
+
+.ranking fieldset {
+	border: 1px solid #777;
+	margin-bottom: 20px;
+	padding: 15px;
+	font-size: 1.1em;
+}
+.ranking fieldset legend {
+	font-weight: bold;
+	font-family: "Georgia", serif;
+}
+.ranking input[type='submit'] {
+	margin-top: 8px;
+	width: 5.6em;
+	display: block;
+}
