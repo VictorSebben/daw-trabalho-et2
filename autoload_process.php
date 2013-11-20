@@ -12,10 +12,9 @@ if(!is_numeric($group_number)){
 $position = ($group_number * 4);
 
 $sql = "SELECT citacoes.texto, categorias.descricao, usuarios.nome
-    FROM citacoes, categorias, usuarios
-    WHERE citacoes.id_categoria = categorias.id
-    AND citacoes.id_usuario = usuarios.id
-    AND citacoes.publicado = 1";
+    FROM citacoes INNER JOIN categorias ON citacoes.id_categoria = categorias.id
+	INNER JOIN usuarios ON citacoes.id_usuario = usuarios.id
+    WHERE citacoes.publicado = 1 LIMIT 4 OFFSET $position";
 
 $con = pg_connect( "host='localhost' user='ifsul'"
         . "password='ifsul' dbname='db_repo_conhecimentos_daw1'"
@@ -28,15 +27,15 @@ while ( $row = pg_fetch_object($res) ) {
     echo "<div class='entrada'>
 
             	<div class='texto'>
-                    &ldquo;$row->texto;&rdquo;
+                    &ldquo;$row->texto&rdquo;
             	</div>
 
             	<div class='categoria'>
-                	Categoria: $row->descricao;
+                	Categoria: $row->descricao
             	</div>
 
    				<div>
-					Usuário: $row->nome;
+					Usuário: $row->nome
 				</div>
 			</div>";
 
