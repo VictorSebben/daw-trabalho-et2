@@ -1,56 +1,49 @@
 <h2>Lista de citações</h2>
 
-<?php
-if( $rs ) :
+<script type="text/javascript">
+$(document).ready(function() {
+	var track_load = 0;
+	var loading = false;
+	var total_grupos = <?php echo $total_grupos; ?>;
+    var items_per_group = <?php echo $items_per_group; ?>;
 
-?>
-    <div id="pesquisa">
-    <form id="form" name="form" method="get" action="index.php?menu=citacoes">
-        <label for="pesquisa">Pesquisar por texto:</label>
-        <input name="pesquisa" type="text" id="pesquisa"
-               size="40" maxlength="40" />
-        <input type="submit" id="btnFiltrar"
-               value="Filtrar" />
-        <input name="menu" type="hidden" id="menu" value="citacoes" />
-    </form>
-    </div>
+	$('#results').load("autoload_process.php", {'group_no':track_load}, function() {track_load++;}); //carregar primeira leva
 
-   
-	<?php
-    	foreach ($rs as $cit) :
-	?>
-		<div id="results">
-			<div class="entrada">
-	
-            	<div class="texto">
-    				"<?php echo $cit->getTexto(); ?>"
-            	</div>
+	$(window).scroll(function() { // detecta quando o usuário scrolleia a página
 
-            	<div class="categoria">
-                	Categoria: <?php echo $cit->getDescCategoria(); ?>
-            	</div>
-            
-   				<div>
-					Usuário: <?php echo $cit->getUsuario(); ?>
-				</div>
-			</div>
-		</div>
-                  
-	<?php
-    	endforeach;//fim do laço while
-	?>
-	<div class="animation_image" style="display:none" align="center"><img src="./images/ajax-loader.gif"></div>
+		if($(window).scrollTop() + $(window).height() == $(document).height()) { // usuário foi até embaixo
+			if(track_load <= total_grupos && loading==false) { // há mais para carregar
+				loading = true;
+				$('.animation_image').show();
 
-<?php
-else :
-    echo "<span class='msg'>Não há citações cadastradas.</span>";
-endif;
-?>
+				// carregar informações do servidor usando um request HTTP Post
+				$.post('autoload_process.php', {'group_no': track_load}, function(data){
 
-<div class="caixa">
-    Total de Registros: <?php echo $citacoesDAO->getTotal(); ?>
-</div>
+					$("#results").append(data); // append info recebida no elemento
 
-<div class='paginacao'>
-  <?php include 'inc/inc.paginacao.html.php'; ?>
-</div>
+					//hide loading image
+					$('.animation_image').hide(); // esconde gif de carregamento quando ele terminar
+
+					track_load++; // incremento no nº de grupos carregados
+					loading = false;
+
+				}).fail(function(xhr, ajaxOptions, thrownError) { // de problema?
+
+					alert(thrownError); //alert com HTTP error
+					$('.animation_image').hide(); // esconde imagem loading
+					loading = false;
+				});
+			}
+		}
+	});
+});
+</script>
+
+
+	<div id="results">
+
+	</div>
+
+	<div class="animation_image" style="display:none" align="center">
+		<img src="./images/ajax-loader.gif">
+	</div>

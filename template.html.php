@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/layout.css">
 
-        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
     </head>
     <body>
 		<div id="topo">
