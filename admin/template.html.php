@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/layout.css">
 
         <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
     </head>
     <body>
         <h1>Gerenciamento de conteúdos</h1>
@@ -18,6 +19,7 @@
                 <li><a <?php H::menuAtivo("citacoes") ?> href="?menu=citacoes">Citações</a></li>
                 <li><a <?php H::menuAtivo("audit_logins") ?> href="?menu=audit_logins" target="_blank">Hist. Logins</a></li>
                 <li><a <?php H::menuAtivo("ranking") ?> href="?menu=ranking">Ranking de acessos</a></li>
+                <li><a <?php H::menuAtivo("usuario") ?> href="?menu=usuario">Dados pessoais</a></li>
             </ul>
         </div>
         <div><a  class="sair" href="./?logout">SAIR</a></div>

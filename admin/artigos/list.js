@@ -27,7 +27,7 @@ var art = {
 							}							
 						}
 						
-						removeMsg();
+						H.removeMsg();
 					}
 				} );
 			});	
@@ -36,19 +36,3 @@ var art = {
 };
 
 art.excluir();
-
-removeMsg();
-
-function removeMsg() {
-	$( '.sucesso' ).on( 'click', function () {
-		$( this ).hide( 'slow', function () {
-	   		$( this ).remove();
-		} );
-	} );
-	
-	$( '.erro' ).on( 'click', function () {
-		$( this ).hide('slow', function () {
-		   $( this ).remove();
-		} );
-	} );
-}

@@ -48,6 +48,8 @@
                 <br/>
                 <input type="submit" name="btnOk" id="btnOk"
                        value="OK">
+
+                <input type="hidden" name="login">
             </fieldset>
         </form>
         <div class="mensagem">

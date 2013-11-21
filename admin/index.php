@@ -30,6 +30,10 @@ switch($menu) {
         $tmpl = FALSE;
         break;
 
+    case 'usuario':
+        include './usuarios/index.php';
+        break;
+
     default:
         $view = './welcome.php';
 }

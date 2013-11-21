@@ -40,10 +40,10 @@ $(document).ready(function() {
 </script>
 
 
-	<div id="results">
+<div id="results">
 
-	</div>
+</div>
 
-	<div class="animation_image" style="display:none" align="center">
-		<img src="./images/ajax-loader.gif">
-	</div>
+<div class="animation_image" style="display:none" align="center">
+    <img src="./images/ajax-loader.gif">
+</div>
