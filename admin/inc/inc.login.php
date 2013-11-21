@@ -3,11 +3,15 @@
 if( isset( $_POST['login'] ) ){
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+    
+    // Prevent SQL injection attacks
+    $email_escaped = pg_escape_string($email);
+    $senha_escaped = pg_escape_string($senha);
 
     $sql = "SELECT id, nome, email, senha
         FROM usuarios
-        WHERE email = '$email'
-        AND senha = md5( '$senha' )";
+        WHERE email = '$email_escaped'
+        AND senha = md5( '$senha_escaped' )";
 
     $db = new Conexao();
     $rs = $db->sqlQuery( $sql );
