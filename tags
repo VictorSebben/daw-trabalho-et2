@@ -19,6 +19,7 @@ CitacoesDAO	dao/dao.ArtigosDAO.php	/^class CitacoesDAO {$/;"	c
 Conexao	admin/dao/dao.Conexao.php	/^class Conexao {$/;"	c
 EDICAO	admin/inc/inc.init.php	/^define( 'EDICAO', 2 );$/;"	d
 H	admin/inc/inc.H.php	/^class H {$/;"	c
+H.removeMsg	admin/js/main.js	/^    removeMsg: function() {$/;"	m
 Paginacao	admin/model/class.Paginacao.php	/^class Paginacao {$/;"	c
 Pagn	admin/inc/inc.paginacao.html.php	/^    $Pagn = new Paginacao($pagina_atual, $num_registros_por_pagina, $total_registros);$/;"	v
 REMOCAO	admin/inc/inc.init.php	/^define( 'REMOCAO', 3 );$/;"	d
@@ -56,7 +57,7 @@ ajaxConvert	admin/js/jquery-1.10.2.js	/^function ajaxConvert( s, response, jqXHR
 ajaxExtend	admin/js/jquery-1.10.2.js	/^function ajaxExtend( target, src ) {$/;"	f
 ajaxHandleResponses	admin/js/jquery-1.10.2.js	/^function ajaxHandleResponses( s, jqXHR, responses ) {$/;"	f
 al	admin/dao/dao.AuditoriasDAO.php	/^                $al = new AuditLogins();$/;"	v
-art.excluir	admin/artigos/list.js	/^	excluir : function () {$/;"	m
+art.excluir	admin/artigos/list.js	/^    excluir : function () {$/;"	m
 artigos	admin/dao/dao.ArtigosDAO.php	/^            $artigos = array();$/;"	v
 artigosDAO	admin/artigos/index.php	/^$artigosDAO = new ArtigosDAO( new Conexao() );$/;"	v
 artigosDAO	artigos/index.php	/^$artigosDAO = new artigosDAO( new Conexao() );$/;"	v
@@ -86,7 +87,7 @@ categorias	admin/citacoes/index.php	/^    $categorias = $catDAO->listar();$/;"	v
 categorias	admin/dao/dao.CategoriasDAO.php	/^            $categorias = array();$/;"	v
 cit	admin/citacoes/index.php	/^    $cit = $citacoesDAO->getCitacao( $id );$/;"	v
 cit	admin/citacoes/index.php	/^    $cit = new Citacao();$/;"	v
-cit.excluir	admin/citacoes/list.js	/^	excluir : function () {$/;"	m
+cit.excluir	admin/citacoes/list.js	/^    excluir : function () {$/;"	m
 citacao	admin/citacoes/index.php	/^    $citacao = new Citacao();$/;"	v
 citacoes	admin/dao/dao.CitacoesDAO.php	/^            $citacoes = array();$/;"	v
 citacoes	dao/dao.ArtigosDAO.php	/^            $citacoes = array();$/;"	v
@@ -139,7 +140,7 @@ despublicar	admin/dao/dao.CitacoesDAO.php	/^    public function despublicar( $id
 display	admin/js/jquery-1.10.2.js	/^	cssShow = { position: "absolute", visibility: "hidden", display: "block" },$/;"	p
 email	admin/inc/inc.login.php	/^    $email = $_POST['email'];$/;"	v
 fontWeight	admin/js/jquery-1.10.2.js	/^		fontWeight: 400$/;"	p
-form.ajaxIncluir	admin/citacoes/form.js	/^	ajaxIncluir : function () {$/;"	m
+form.ajaxIncluir	admin/citacoes/form.js	/^    ajaxIncluir : function () {$/;"	m
 genFx	admin/js/jquery-1.10.2.js	/^function genFx( type, includeWidth ) {$/;"	f
 genFx.which.height	admin/js/jquery-1.10.2.js	/^		attrs = { height: type },$/;"	p
 getArtigo	dao/dao.ArtigosDAO.php	/^    public function getArtigo( $id ) {$/;"	f
@@ -302,8 +303,6 @@ publicado	admin/model/class.Citacao.php	/^    private $publicado;$/;"	v
 publicado	model/class.Artigo.php	/^        $this->publicado = $publicado;$/;"	v
 publicado	model/class.Artigo.php	/^    private $publicado;$/;"	v
 r20	admin/js/jquery-1.10.2.js	/^var r20 = \/%20\/g,$/;"	v
-removeMsg	admin/artigos/list.js	/^function removeMsg() {$/;"	f
-removeMsg	admin/citacoes/list.js	/^function removeMsg() {$/;"	f
 res	admin/dao/dao.ArtigosDAO.php	/^        $res = $this->db->sqlQuery( $sql );$/;"	v
 res	admin/dao/dao.AuditoriasDAO.php	/^        $res = $this->db->sqlQuery( $sql );$/;"	v
 res	admin/dao/dao.CategoriasDAO.php	/^        $res = $this->db->sqlQuery( $sql );$/;"	v

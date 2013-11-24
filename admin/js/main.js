@@ -1,15 +1,19 @@
 var H = {
-	removeMsg: function() {
-		$( '.sucesso' ).on( 'click', function () {
-			$( this ).hide( 'slow', function () {
-	   			$( this ).remove();
-			} );
-		} );
-	
-		$( '.erro' ).on( 'click', function () {
-			$( this ).hide('slow', function () {
-				$( this ).remove();
-			} );
-		} );
-	}
+    removeMsg: function() {
+        $( '.sucesso' ).on( 'click', function () {
+            $( this ).hide( 'slow', function () {
+                   $( this ).remove();
+            } );
+        } );
+    
+        $( '.erro' ).on( 'click', function () {
+            $( this ).hide('slow', function () {
+                $( this ).remove();
+            } );
+        } );
+    }
 }
+
+jQuery(window).load(function() {
+    H.removeMsg();
+});
