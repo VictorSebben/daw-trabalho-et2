@@ -1,22 +1,23 @@
 <h2>Lista de artigos</h2>
 <a href="?menu=artigos&acao=inserir" class="inserir">Inserir artigo</a>
 
+<div id="pesquisa">
+<form id="form" name="form" method="get" action="index.php?menu=artigos">
+    <label for="pesquisa">Pesquisar por texto:</label>
+    <input name="pesquisa" type="text" id="pesquisa"
+           size="40" maxlength="40" />
+    <input type="submit" id="btnFiltrar"
+           value="Filtrar" />
+    <input name="menu" type="hidden" id="menu" value="artigos" />
+</form>
+</div>
+
+<?php echo H::sysMsgs(); ?>
+
 <?php
 if( $rs ) :
 
 ?>
-    <div id="pesquisa">
-    <form id="form" name="form" method="get" action="index.php?menu=artigos">
-        <label for="pesquisa">Pesquisar por texto:</label>
-        <input name="pesquisa" type="text" id="pesquisa"
-               size="40" maxlength="40" />
-        <input type="submit" id="btnFiltrar"
-               value="Filtrar" />
-        <input name="menu" type="hidden" id="menu" value="artigos" />
-    </form>
-    </div>
-
-    <?php echo H::sysMsgs(); ?>
 
     <div class="artigo">
         <table border="0">
@@ -61,7 +62,7 @@ if( $rs ) :
 
 <?php
 else :
-    echo "<span class='msg'>Não há citações cadastradas.</span>";
+    echo "<span class='msg'>Não há resutados para esta operação.</span>";
 endif;
 ?>
 

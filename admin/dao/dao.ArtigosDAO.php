@@ -67,13 +67,12 @@ class ArtigosDAO {
             WHERE publicado = 1";
 
         if ( $this->pesq ) {
-            $sql .= " AND texto ILIKE '%{$this->pesq}%' ";
+            $sql .= " AND artigos.titulo ILIKE '%{$this->pesq}%' OR artigos.texto ILIKE '%{$this->pesq}%' ";
         }
 
         $sql .= " AND usuarios.id = artigos.id_usuario
             ORDER BY {$this->ordem}
             LIMIT {$this->limit} OFFSET {$this->offset};";
-
 
         $res = $this->db->sqlQuery( $sql );
         if( $res ) {

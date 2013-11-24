@@ -44,6 +44,7 @@ __construct	dao/dao.ArtigosDAO.php	/^    public function __construct( $banco ) {
 __get	admin/model/class.Citacao.php	/^    public function __get( $field ) {$/;"	f
 __get	model/class.Artigo.php	/^    public function __get( $field ) {$/;"	f
 a	admin/dao/dao.ArtigosDAO.php	/^                $a = new Artigo();$/;"	v
+a	admin/dao/dao.ArtigosDAO.php	/^            $a = new Artigo();$/;"	v
 a	dao/dao.ArtigosDAO.php	/^            $a = new Artigo();$/;"	v
 acao	admin/artigos/index.php	/^$acao = H::getVar('acao');$/;"	v
 acao	admin/artigos/index.php	/^if( $acao == 'listar' || $acao == NULL ) {$/;"	v
@@ -143,6 +144,7 @@ fontWeight	admin/js/jquery-1.10.2.js	/^		fontWeight: 400$/;"	p
 form.ajaxIncluir	admin/citacoes/form.js	/^    ajaxIncluir : function () {$/;"	m
 genFx	admin/js/jquery-1.10.2.js	/^function genFx( type, includeWidth ) {$/;"	f
 genFx.which.height	admin/js/jquery-1.10.2.js	/^		attrs = { height: type },$/;"	p
+getArtigo	admin/dao/dao.ArtigosDAO.php	/^    public function getArtigo( $id ) {$/;"	f
 getArtigo	dao/dao.ArtigosDAO.php	/^    public function getArtigo( $id ) {$/;"	f
 getArtigos	dao/dao.ArtigosDAO.php	/^    public function getArtigos( $sql ) {$/;"	f
 getCategoria	admin/model/class.Artigo.php	/^    public function getCategoria() {$/;"	f
@@ -185,6 +187,7 @@ getWidthOrHeight	admin/js/jquery-1.10.2.js	/^function getWidthOrHeight( elem, na
 getWindow	admin/js/jquery-1.10.2.js	/^function getWindow( elem ) {$/;"	f
 get_offset	admin/model/class.Paginacao.php	/^    public function get_offset() {$/;"	f
 get_total_pages	admin/model/class.Paginacao.php	/^    public function get_total_pages() {$/;"	f
+gravar	admin/dao/dao.ArtigosDAO.php	/^    public function gravar( $artigo ) {$/;"	f
 gravar	admin/dao/dao.CitacoesDAO.php	/^    public function gravar( $citacao ) {$/;"	f
 has_next_page	admin/model/class.Paginacao.php	/^    public function has_next_page() {$/;"	f
 has_previous_page	admin/model/class.Paginacao.php	/^    public function has_previous_page() {$/;"	f
@@ -204,7 +207,6 @@ id	admin/model/class.Citacao.php	/^    private $id;$/;"	v
 id	index.php	/^$id = H::getVar('id', 'REQUEST');$/;"	v
 id	model/class.Artigo.php	/^        $this->id = $id;$/;"	v
 id	model/class.Artigo.php	/^    private $id;$/;"	v
-id_desc	admin/dao/dao.ArtigosDAO.php	/^         $id_desc = REMOCAO;$/;"	v
 inspectPrefiltersOrTransports	admin/js/jquery-1.10.2.js	/^function inspectPrefiltersOrTransports( structure, options, originalOptions, jqXHR ) {$/;"	f
 inspectPrefiltersOrTransports.inspect	admin/js/jquery-1.10.2.js	/^	function inspect( dataType ) {$/;"	f
 isHidden	admin/js/jquery-1.10.2.js	/^function isHidden( elem, el ) {$/;"	f
@@ -312,6 +314,7 @@ res	admin/dao/dao.Conexao.php	/^        $res = pg_query($this->con, $sql);$/;"	v
 res	dao/dao.ArtigosDAO.php	/^        $res = $this->db->sqlQuery( $sql );$/;"	v
 return	admin/js/jquery-1.10.2.js	/^	return new Tween.prototype.init( elem, options, prop, end, easing );$/;"	c
 return.init	admin/js/jquery-1.10.2.js	/^	return new Tween.prototype.init( elem, options, prop, end, easing );$/;"	m
+row	admin/dao/dao.ArtigosDAO.php	/^            $row = pg_fetch_object( $res );$/;"	v
 row	admin/dao/dao.ArtigosDAO.php	/^            while( $row = pg_fetch_object($res) ) {$/;"	v
 row	admin/dao/dao.AuditoriasDAO.php	/^            while( $row = pg_fetch_object( $res ) ) {$/;"	v
 row	admin/dao/dao.CategoriasDAO.php	/^            while( $row = pg_fetch_object($res) ) {$/;"	v
@@ -362,10 +365,12 @@ setUsuario	admin/model/class.Artigo.php	/^    public function setUsuario($usuari
 setUsuario	admin/model/class.Citacao.php	/^    public function setUsuario($usuario) {$/;"	f
 setUsuario	model/class.Artigo.php	/^    public function setUsuario($usuario) {$/;"	f
 showHide	admin/js/jquery-1.10.2.js	/^function showHide( elements, show ) {$/;"	f
-sql	admin/dao/dao.ArtigosDAO.php	/^         $sql = "INSERT INTO audit_artigos ( id_artigo, id_usuario, id_descricao )$/;"	v
+sql	admin/dao/dao.ArtigosDAO.php	/^            $sql = "INSERT INTO artigos ( id_categoria, id_usuario, titulo, texto )$/;"	v
+sql	admin/dao/dao.ArtigosDAO.php	/^            $sql = "UPDATE artigos SET$/;"	v
 sql	admin/dao/dao.ArtigosDAO.php	/^         $sql = "UPDATE artigos SET publicado = 0$/;"	v
 sql	admin/dao/dao.ArtigosDAO.php	/^        $sql = "SELECT COUNT(*) AS num FROM artigos WHERE publicado = 1";$/;"	v
 sql	admin/dao/dao.ArtigosDAO.php	/^        $sql = "SELECT artigos.id, LEFT ( artigos.texto, 30 ) AS texto, artigos.titulo,$/;"	v
+sql	admin/dao/dao.ArtigosDAO.php	/^        $sql = "SELECT artigos.id_categoria, artigos.texto, artigos.titulo$/;"	v
 sql	admin/dao/dao.AuditoriasDAO.php	/^        $sql = "SELECT$/;"	v
 sql	admin/dao/dao.CategoriasDAO.php	/^        $sql = "SELECT categorias.id, categorias.descricao FROM categorias";$/;"	v
 sql	admin/dao/dao.CategoriasDAO.php	/^        $sql = "SELECT descricao FROM categorias WHERE id = '{$id}'";$/;"	v
