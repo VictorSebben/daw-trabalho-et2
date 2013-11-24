@@ -32,6 +32,10 @@ p {
     padding: 10px;
 }
 
+.entrada h3 {
+	font-size: 1.5em;
+}
+
 #pesquisa {
     margin: 10px 0;
 }
@@ -55,6 +59,15 @@ p {
     font-size: 1.1em;
     font-family: "Timer New Roman", serif;
     margin: 10px 0;
+    text-align: justify;
+}
+.texto img {
+	float: right;
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin: 0 0 0 15px;
+	width: 100px;
+	height: 100px;
 }
 
 .palavra {

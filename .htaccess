@@ -1,0 +1,6 @@
+#<IfModule mod_rewrite.c>
+#    RewriteEngine On
+#    RewriteCond %{SCRIPT_FILENAME} !-d
+#    RewriteCond %{SCRIPT_FILENAME} !-f
+#    RewriteRule ^([0-9a-zA-Z-]+)$  ?menu=$1 [NC,L]
+#</IfModule>
