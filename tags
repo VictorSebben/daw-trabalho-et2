@@ -6,6 +6,7 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 Animation	admin/js/jquery-1.10.2.js	/^function Animation( elem, properties, options ) {$/;"	f
 Artigo	admin/model/class.Artigo.php	/^class Artigo {$/;"	c
+Artigo	model/class.Artigo.php	/^class Artigo {$/;"	c
 ArtigosDAO	admin/dao/dao.ArtigosDAO.php	/^class ArtigosDAO {$/;"	c
 AuditLogins	admin/model/class.AuditLogins.php	/^class AuditLogins {$/;"	c
 AuditoriasDAO	admin/dao/dao.AuditoriasDAO.php	/^class AuditoriasDAO {$/;"	c
@@ -13,7 +14,6 @@ CRIACAO	admin/inc/inc.init.php	/^define( 'CRIACAO', 1 );$/;"	d
 Categoria	admin/model/class.Categoria.php	/^class Categoria {$/;"	c
 CategoriasDAO	admin/dao/dao.CategoriasDAO.php	/^class CategoriasDAO {$/;"	c
 Citacao	admin/model/class.Citacao.php	/^class Citacao {$/;"	c
-Citacao	model/class.Artigo.php	/^class Citacao {$/;"	c
 CitacoesDAO	admin/dao/dao.CitacoesDAO.php	/^class CitacoesDAO {$/;"	c
 CitacoesDAO	dao/dao.ArtigosDAO.php	/^class CitacoesDAO {$/;"	c
 Conexao	admin/dao/dao.Conexao.php	/^class Conexao {$/;"	c

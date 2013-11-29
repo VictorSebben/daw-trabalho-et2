@@ -1,6 +1,6 @@
 <?php
 
-class Citacao {
+class Artigo {
     private $id;
     private $titulo
     private $categoria;
@@ -68,7 +68,4 @@ class Citacao {
     public function setDescCategoria($descCategoria) {
         $this->descCategoria = $descCategoria;
     }
-
-
-
 }
